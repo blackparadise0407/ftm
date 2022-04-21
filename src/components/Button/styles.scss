@@ -1,0 +1,46 @@
+@import "assets/styles/variables";
+
+.button {
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  font-weight: $font-bold;
+  cursor: pointer;
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  &--primary {
+    border-color: $cerulean-blue;
+    background-color: $cerulean-blue;
+    color: $cerulean-blue;
+  }
+
+  &--secondary {
+    border-color: $vivid-tangelo;
+    background-color: $vivid-tangelo;
+    color: $vivid-tangelo;
+  }
+
+  &--default {
+    font-size: $fs-base;
+    padding: 17px 36px;
+    text-transform: uppercase;
+  }
+
+  &--small {
+    font-size: $fs-sm;
+    padding: 10px 19px;
+    text-transform: capitalize;
+  }
+
+  &--outlined {
+    background-color: $white;
+  }
+
+  &--filled {
+    color: $white;
+  }
+}

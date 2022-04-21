@@ -1,0 +1,24 @@
+@import "assets/styles/variables";
+
+header {
+  height: 91px;
+  padding: 0 $spacing-h-lg;
+  background: $linear-blue;
+  border-radius: 20px;
+
+  .logo {
+    img {
+      width: 248px;
+      height: 80px;
+    }
+  }
+
+  ul {
+    gap: 30px;
+    // margin-left: $spacing-h-lg;
+  }
+
+  button {
+    // margin-left: auto;
+  }
+}

@@ -1,0 +1,44 @@
+@import "assets/styles/variables";
+
+footer {
+  height: 650px;
+  padding: 73px $spacing-h-lg 0;
+  background-color: rgba($color: $vivid-tangelo, $alpha: 0.65);
+
+  .left {
+    .links {
+      margin-top: 40px;
+      gap: 100px;
+
+      .section {
+        .title {
+        }
+
+        ul {
+          margin-top: 19px;
+          gap: 26px;
+        }
+      }
+    }
+  }
+
+  .right {
+    img {
+      width: 570px;
+      height: 384px;
+    }
+
+    button {
+      margin-top: 30px;
+    }
+  }
+
+  .copyright {
+    padding: 15px 0;
+    border-top: 0.5px solid $white;
+
+    .icon-groups {
+      gap: 11px;
+    }
+  }
+}

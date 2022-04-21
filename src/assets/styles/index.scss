@@ -1,0 +1,38 @@
+@import "imports";
+@import "base";
+@import "variables";
+@import "typography";
+@import "reset";
+
+html {
+  font-family: $font;
+}
+
+body {
+  font-size: $fs-base;
+  overflow: hidden;
+}
+
+h1 {
+  @extend .h1;
+}
+
+h2 {
+  @extend .h2;
+}
+
+h3 {
+  @extend .h3;
+}
+
+h4 {
+  @extend .h4;
+}
+
+h5 {
+  @extend .h5;
+}
+
+h6 {
+  @extend .h6;
+}
