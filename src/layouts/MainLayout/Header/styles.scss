@@ -4,7 +4,9 @@ header {
   height: 91px;
   padding: 0 $spacing-h-lg;
   background: $linear-blue;
-  border-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
 
   .logo {
     img {

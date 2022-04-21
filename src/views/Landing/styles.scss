@@ -1,2 +1,16 @@
 .landing {
+
+    #chartdiv {
+        max-width: '1670px';
+        height: '812px';
+        margin: 0 auto;
+        background: rgba(60, 99, 180, 0.5);
+        border: 10px solid rgba(205, 205, 205, 0.5);
+        box-sizing: border-box;
+        box-shadow: inset -20px -20px 24px rgba(0, 0, 0, 0.1);
+        border-radius: 50px;
+        margin-top: 30px;
+        margin-bottom: 38px;
+        overflow: hidden;
+    }
 }
