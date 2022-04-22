@@ -49,7 +49,7 @@ export default function Landing() {
   return (
     <div className="landing">
       {/* Map section */}
-      <section>
+      <section className="chart">
         <div id="chartdiv"></div>
       </section>
       {/* Featured tour section */}
