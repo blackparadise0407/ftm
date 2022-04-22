@@ -1,6 +1,7 @@
 @import 'assets/styles/variables';
 
 .landing {
+    background-color: #e5e5e5;
 
     #chartdiv {
         max-width: 1670px;
@@ -54,5 +55,35 @@
             }
         }
 
+    }
+
+    .new {
+        margin-top: 80px;
+
+        .card-groups {
+            margin-top: 38px;
+            gap: 30px;
+        }
+    }
+
+    .leaderboard {
+        margin-top: 85px;
+        min-height: 668px;
+        background: rgba(143, 196, 246, 0.3);
+        backdrop-filter: blur(20px);
+        border-radius: 20px;
+
+
+        .h3 {
+            display: inline-block;
+            margin-top: 64px;
+        }
+
+        .user-ranking-groups {
+            min-height: 402px;
+            margin-top: 92px;
+            gap: 155px;
+
+        }
     }
 }

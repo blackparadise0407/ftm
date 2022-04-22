@@ -1,19 +1,28 @@
-import { HTMLProps } from 'react';
+import { HTMLProps, memo } from 'react';
 import clsx from 'clsx';
 
 import { AVATAR, BADGE, CARD_IMAGE } from 'assets/images';
+import { Clock } from 'assets/svgs';
+import { Button } from 'components';
 
 import './styles.scss';
-import { CLOCK } from 'assets/svgs';
-import Button from 'components/Button';
 
 interface TourCardProps extends HTMLProps<HTMLDivElement> {
   transparent?: boolean;
+  onBookTour?: () => void;
 }
 
-export default function TourCard({ transparent = false }: TourCardProps) {
+export default memo(function TourCard({
+  transparent = false,
+  onBookTour = () => {},
+}: TourCardProps) {
   return (
-    <div className={clsx('tour-card', transparent && 'tour-card--transparent')}>
+    <div
+      className={clsx(
+        'tour-card',
+        transparent ? 'tour-card--transparent text-white' : 'text-dark'
+      )}
+    >
       <div className="header flex">
         <img src={AVATAR} alt="" />
         <div className="flex flex-col">
@@ -33,13 +42,15 @@ export default function TourCard({ transparent = false }: TourCardProps) {
         </div>
         <div className="flex items-center action">
           <span className="flex items-center">
-            <img src={CLOCK} alt="" />
+            <Clock className={transparent ? '#FAFBFD' : '#333333'} />
             <span className="text-sm">08:30 AM</span>
           </span>
           <div className="flex-grow"></div>
-          <Button size="small">Book Tour</Button>
+          <Button size="small" onClick={onBookTour}>
+            Book Tour
+          </Button>
         </div>
       </div>
     </div>
   );
-}
+});

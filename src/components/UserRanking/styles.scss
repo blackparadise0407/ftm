@@ -1,0 +1,97 @@
+@import 'assets/styles/mixins';
+@import 'assets/styles/variables';
+
+.user-ranking {
+    &--default {
+        --size: 50px;
+        --border: 0px;
+        --ranking-margin-top: 0px;
+        --ranking-size: 16px;
+        --ranking-font: 10px;
+        --ranking-color: #{$cerulean-blue};
+        --ranking-bg-color: #{$white};
+        --status-height: 7.48px;
+        --status-width: 11.6px;
+        --status-margin-left: 7.2px;
+
+        gap: 14px;
+
+        .user-ranking__avatar-wrapper {
+            .rank {
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+
+    &--large {
+        --size: 200px;
+        --border: 8px;
+        --ranking-size: 32px;
+        --ranking-margin-top: 10px;
+        --ranking-font: #{$fs-lg};
+        --ranking-color: #{$white};
+        --ranking-bg-color: #{$cerulean-blue};
+        --status-height: 14.96px;
+        --status-width: 23.19px;
+        --status-margin-left: 0px;
+
+        gap: 36px;
+
+        .user-ranking__avatar-wrapper {
+            .rank {
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 50%);
+            }
+
+            img.status {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, calc(-100% - 18px));
+            }
+        }
+    }
+
+    &__avatar-wrapper {
+        width: calc(var(--size) + var(--border));
+        height: calc(var(--size) + var(--border));
+        border-radius: 50%;
+        background: $linear-blue;
+
+        .avatar {
+            @include absoluteCenter();
+            width: var(--size);
+            height: var(--size);
+            border-radius: 50%;
+        }
+
+        .rank {
+            position: absolute;
+            display: grid;
+            place-items: center;
+            width: var(--ranking-size);
+            height: var(--ranking-size);
+            font-size: var(--ranking-font);
+            color: var(--ranking-color);
+            background-color: var(--ranking-bg-color);
+            border-radius: 50%;
+        }
+    }
+
+    &__info-wrapper {
+        gap: 10px;
+
+        .ranking {
+            margin-top: var(--ranking-margin-top);
+            gap: 6px;
+        }
+
+        img.status {
+            width: var(--status-width);
+            height: var(--status-height);
+            margin-left: var(--status-margin-left);
+        }
+    }
+}

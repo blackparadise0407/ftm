@@ -1,5 +1,21 @@
 @import "variables";
 
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.fixed {
+  position: fixed;
+}
+
 .text-primary {
   color: $cerulean-blue;
 }
@@ -23,6 +39,10 @@
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-grow {
@@ -75,4 +95,58 @@
   @media screen and (min-width: 1440px) {
     max-width: 1410px;
   }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.grid {
+  display: grid;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-baseline {
+  align-self: baseline;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.self-stretch {
+  align-self: stretch;
 }

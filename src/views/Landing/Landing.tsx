@@ -1,13 +1,12 @@
 import { useEffect, useRef } from 'react';
 import * as am4geodata from '@amcharts/amcharts4-geodata/worldLow';
 import * as am4core from '@amcharts/amcharts4/core';
-import * as am4charts from '@amcharts/amcharts4/charts';
 import * as am4maps from '@amcharts/amcharts4/maps';
 import * as am4themes from '@amcharts/amcharts4/themes/animated';
 
 import './styles.scss';
-import { BANNER, FOOTER_IMG } from 'assets/images';
-import { Button, TourCard } from 'components';
+import { BANNER } from 'assets/images';
+import { Button, TourCard, UserRanking } from 'components';
 
 am4core.useTheme(am4themes.default);
 
@@ -76,6 +75,28 @@ export default function Landing() {
               <div className="flex-grow"></div>
               <TourCard transparent />
             </div>
+          </div>
+        </div>
+      </section>
+      {/* New tour section */}
+      <section className="new text-white">
+        <div className="container">
+          <h3 className="h3 text-secondary">New Tour</h3>
+          <div className="flex card-groups">
+            <TourCard />
+            <TourCard />
+            <TourCard />
+          </div>
+        </div>
+      </section>
+
+      <section className="leaderboard">
+        <div className="container">
+          <h3 className="h3 text-secondary">Leaders Board</h3>
+          <div className="flex justify-center user-ranking-groups">
+            <UserRanking className="self-end" size="large" />
+            <UserRanking className="self-baseline" size="large" />
+            <UserRanking className="self-end" size="large" />
           </div>
         </div>
       </section>
