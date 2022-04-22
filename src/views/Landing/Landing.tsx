@@ -6,6 +6,8 @@ import * as am4maps from '@amcharts/amcharts4/maps';
 import * as am4themes from '@amcharts/amcharts4/themes/animated';
 
 import './styles.scss';
+import { BANNER, FOOTER_IMG } from 'assets/images';
+import { Button, TourCard } from 'components';
 
 am4core.useTheme(am4themes.default);
 
@@ -47,8 +49,36 @@ export default function Landing() {
 
   return (
     <div className="landing">
-      <div id="chartdiv" style={{ width: '1670px', height: '812px' }}></div>
-      Landing page
+      {/* Map section */}
+      <section>
+        <div id="chartdiv"></div>
+      </section>
+      {/* Featured tour section */}
+      <section className="feature text-white">
+        <h3 className="h3 text-secondary">Featured Tour</h3>
+        <div
+          className="image-container"
+          style={{
+            background: `url(${BANNER}) center no-repeat`,
+            backgroundSize: 'cover',
+          }}
+        >
+          <div className="container">
+            <h2 className="h2 title">Lorem Ipsum</h2>
+            <p className="text-lg description">
+              Lorem Ipsum is simply dummy text of the and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since
+              the 1500s
+            </p>
+            <Button className="img-button">More fun</Button>
+            <div className="flex tour-card-groups">
+              <TourCard transparent />
+              <div className="flex-grow"></div>
+              <TourCard transparent />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

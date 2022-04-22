@@ -1,5 +1,22 @@
 @import "variables";
 
+.text-primary {
+  color: $cerulean-blue;
+}
+
+.text-secondary {
+  color: $vivid-tangelo;
+}
+
+.bg-primary {
+  background-color: $cerulean-blue;
+
+}
+
+.bg-secondary {
+  background-color: $vivid-tangelo;
+}
+
 .flex {
   display: flex;
 }
@@ -14,6 +31,14 @@
 
 .items-center {
   align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
 }
 
 .justify-center {
@@ -42,4 +67,12 @@
 
 .h-screen {
   height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+
+  @media screen and (min-width: 1440px) {
+    max-width: 1410px;
+  }
 }

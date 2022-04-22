@@ -1,35 +1,37 @@
-import clsx from "clsx";
-import { HTMLProps } from "react";
+import clsx from 'clsx';
+import { HTMLProps } from 'react';
 
-import "./styles.scss";
+import './styles.scss';
 
-type ButtonHTMLType = "button" | "submit" | "reset" | undefined;
+type ButtonHTMLType = 'button' | 'submit' | 'reset' | undefined;
 
-interface ButtonProps extends Omit<HTMLProps<HTMLButtonElement>, "size"> {
+interface ButtonProps extends Omit<HTMLProps<HTMLButtonElement>, 'size'> {
   htmlType?: ButtonHTMLType;
-  size?: "default" | "small";
-  variant?: "filled" | "outlined";
-  type?: "primary" | "secondary";
+  size?: 'default' | 'small';
+  variant?: 'filled' | 'outlined';
+  type?: 'primary' | 'secondary';
   block?: boolean;
 }
 
 export default function Button({
-  htmlType = "button",
-  size = "default",
-  variant = "filled",
-  type = "primary",
+  htmlType = 'button',
+  size = 'default',
+  variant = 'filled',
+  type = 'primary',
   block = false,
+  className,
   children,
   ...rest
 }: ButtonProps) {
   return (
     <button
       className={clsx(
-        "button",
+        'button',
         `button--${size}`,
         `button--${variant}`,
         `button--${type}`,
-        block && "button--block"
+        block && 'button--block',
+        className
       )}
       type={htmlType as any}
       {...rest}

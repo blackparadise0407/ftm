@@ -1,65 +1,65 @@
-import { FOOTER_IMG } from "assets/images";
-import { FACEBOOK, INSTAGRAM, PINTEREST, YOUTUBE } from "assets/svgs";
-import { Button } from "components";
-import "./styles.scss";
+import { FOOTER_IMG } from 'assets/images';
+import { FACEBOOK, INSTAGRAM, PINTEREST, YOUTUBE } from 'assets/svgs';
+import { Button } from 'components';
+import './styles.scss';
 
 const sections = [
   {
-    title: "COMPANY",
+    title: 'COMPANY',
     items: [
       {
-        name: "About",
-        href: "/",
+        name: 'About',
+        href: '/',
       },
       {
-        name: "Contact",
-        href: "/",
+        name: 'Contact',
+        href: '/',
       },
       {
-        name: "Join as A Guide",
-        href: "/",
+        name: 'Join as A Guide',
+        href: '/',
       },
     ],
   },
   {
-    title: "EXPLORE",
+    title: 'EXPLORE',
     items: [
       {
-        name: "Tour",
-        href: "/",
+        name: 'Tour',
+        href: '/',
       },
       {
-        name: "Guides",
-        href: "/",
+        name: 'Guides',
+        href: '/',
       },
       {
-        name: "Themes",
-        href: "/",
+        name: 'Themes',
+        href: '/',
       },
       {
-        name: "Destinations",
-        href: "/",
+        name: 'Destinations',
+        href: '/',
       },
     ],
   },
   {
-    title: "POLICIES",
+    title: 'POLICIES',
     items: [
       {
-        name: "Privacy Policy",
-        href: "/",
+        name: 'Privacy Policy',
+        href: '/',
       },
       {
-        name: "Terms Of Services",
-        href: "/",
+        name: 'Terms Of Services',
+        href: '/',
       },
       {
-        name: "Review Policy",
-        href: "/",
+        name: 'Review Policy',
+        href: '/',
       },
       {
-        name: "Cookie Policy",
-        href: "/",
+        name: 'Cookie Policy',
+        href: '/',
       },
     ],
   },
@@ -86,38 +86,40 @@ const _renderLinkSection = (): JSX.Element => {
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col text-white">
-      <div className="flex  w-full">
-        <div className="left">
-          <h1 className="h1">fillthemap</h1>
-          {_renderLinkSection()}
+    <footer className="text-white">
+      <div className="flex flex-col h-full container">
+        <div className="flex w-full">
+          <div className="left">
+            <h1 className="h1">fillthemap</h1>
+            {_renderLinkSection()}
+          </div>
+          <div className="flex-grow"></div>
+          <div className="right flex flex-col">
+            <img src={FOOTER_IMG} alt="footer" />
+            <Button size="small" type="secondary" variant="outlined">
+              Sign Up
+            </Button>
+          </div>
         </div>
         <div className="flex-grow"></div>
-        <div className="right flex flex-col">
-          <img src={FOOTER_IMG} alt="footer" />
-          <Button size="small" type="secondary" variant="outlined">
-            Sign Up
-          </Button>
+        <div className="copyright flex">
+          <p className="text-sm">© 2021 fillthemap. All rights reserved</p>
+          <div className="flex-grow"></div>
+          <ul className="flex icon-groups">
+            <li>
+              <img src={FACEBOOK} alt="" />
+            </li>
+            <li>
+              <img src={INSTAGRAM} alt="" />
+            </li>
+            <li>
+              <img src={YOUTUBE} alt="" />
+            </li>
+            <li>
+              <img src={PINTEREST} alt="" />
+            </li>
+          </ul>
         </div>
-      </div>
-      <div className="flex-grow"></div>
-      <div className="copyright flex">
-        <p className="text-sm">© 2021 fillthemap. All rights reserved</p>
-        <div className="flex-grow"></div>
-        <ul className="flex icon-groups">
-          <li>
-            <img src={FACEBOOK} alt="" />
-          </li>
-          <li>
-            <img src={INSTAGRAM} alt="" />
-          </li>
-          <li>
-            <img src={YOUTUBE} alt="" />
-          </li>
-          <li>
-            <img src={PINTEREST} alt="" />
-          </li>
-        </ul>
       </div>
     </footer>
   );

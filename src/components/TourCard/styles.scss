@@ -1,0 +1,69 @@
+@import 'assets/styles/variables';
+
+.tour-card {
+    max-width: 451px;
+    width: 100%;
+    height: 450px;
+    border-radius: 26px;
+    background-color: $gray-3;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    border: 1px solid transparent;
+
+    .header {
+        height: 100px;
+        padding: 35px 30px 20px;
+        gap: 10px;
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        div {
+            gap: 2px;
+        }
+    }
+
+    .body {
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .footer {
+        height: 148px;
+        padding: 20px 30px 35px;
+
+        .head-line {
+            gap: 8px;
+
+            img {
+                width: 16.67px;
+                height: 16.67px;
+                border-radius: 50%;
+            }
+        }
+
+        .action {
+            margin-top: 10px;
+
+            span {
+                gap: 6px;
+            }
+
+            img {
+                height: 11px;
+                width: 11px;
+
+            }
+        }
+    }
+
+    &--transparent {
+        background-color: rgba($color: $gray-3, $alpha: 0.2);
+        backdrop-filter: blur(4px);
+        border-color: #7a7162;
+
+    }
+
+}
