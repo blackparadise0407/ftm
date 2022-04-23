@@ -125,6 +125,10 @@
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .truncate {
   white-space: nowrap;
   overflow: hidden;

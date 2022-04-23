@@ -9,9 +9,9 @@ interface InputProps extends HTMLProps<HTMLDivElement> {
 
 export default memo(function Input({ inputProps, icon, ...rest }: InputProps) {
   return (
-    <div className="input flex items-center" {...rest}>
+    <div className="input relative" {...rest}>
       <input {...inputProps} />
-      {icon && <span className="input__icon">{icon}</span>}
+      {icon && <span className="input__icon absolute">{icon}</span>}
     </div>
   );
 });

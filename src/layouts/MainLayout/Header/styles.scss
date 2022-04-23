@@ -3,7 +3,7 @@
 header {
   height: 91px;
   padding: 0 $spacing-h-lg;
-  background: $linear-blue;
+  background: $white;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 
@@ -18,5 +18,15 @@ header {
   ul {
     gap: 30px;
     // margin-left: $spacing-h-lg;
+
+    li {
+      .link {
+        color: $gray-3;
+
+        &--active {
+          color: $cerulean-blue;
+        }
+      }
+    }
   }
 }

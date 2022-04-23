@@ -6,7 +6,8 @@
     border-radius: 10px;
 
     input {
-        padding: 13px 20px;
+        width: 100%;
+        padding: 13px 52px 13px 20px;
         font-size: $fs-base;
         font-family: $font;
         background-color: transparent;
@@ -16,5 +17,9 @@
         }
     }
 
-    &__icon {}
+    &__icon {
+        top: 50%;
+        right: 23px;
+        transform: translateY(-50%);
+    }
 }

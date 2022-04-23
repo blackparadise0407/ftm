@@ -1,0 +1,33 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
+.checkbox {
+    gap: 15px;
+    width: fit-content;
+    cursor: pointer;
+
+    &__box {
+        width: 24px;
+        height: 24px;
+        background-color: $white;
+        border: 1px solid $gray-2;
+        border-radius: 2px;
+
+        .checkmark {
+            @include absoluteCenter();
+            display: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 2px;
+            background-color: $cerulean-blue;
+            z-index: 1;
+        }
+    }
+
+    input:checked~&__box {
+
+        .checkmark {
+            display: block;
+        }
+    }
+}

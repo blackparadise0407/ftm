@@ -1,4 +1,5 @@
 import LOGO from './logo.png';
+import LOGO_BLUE from './logo-blue.png';
 import FOOTER_IMG from './footer-img.png';
 import BANNER from './banner.jpg';
 import CARD_IMAGE from './card-img.png';
@@ -7,4 +8,14 @@ import BADGE from './badge.png';
 import PLAYER from './player.png';
 import PLAY from './play.png';
 
-export { AVATAR, BADGE, BANNER, FOOTER_IMG, CARD_IMAGE, LOGO, PLAY, PLAYER };
+export {
+  AVATAR,
+  BADGE,
+  BANNER,
+  FOOTER_IMG,
+  CARD_IMAGE,
+  LOGO,
+  LOGO_BLUE,
+  PLAY,
+  PLAYER,
+};
