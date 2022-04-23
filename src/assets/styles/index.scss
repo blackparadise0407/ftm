@@ -5,6 +5,9 @@
 @import "mixins";
 @import "reset";
 
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 html {
   font-family: $font;
 }

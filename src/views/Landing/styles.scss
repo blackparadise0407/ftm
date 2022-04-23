@@ -1,4 +1,5 @@
 @import 'assets/styles/variables';
+@import 'assets/styles/mixins';
 
 .landing {
 
@@ -86,6 +87,52 @@
             margin-top: 92px;
             gap: 155px;
 
+        }
+
+        .slider {
+            margin-top: 58px;
+            border-radius: 20px;
+            padding: 15px 30px 17px;
+            background: $linear-blue;
+        }
+    }
+
+    .about {
+        min-height: 723px;
+
+        &__heading {
+
+            .heading {
+                width: 690px;
+                height: 172px;
+                margin-bottom: 77px;
+                margin-top: 219px;
+                font-size: 68px;
+                font-weight: $font-bold;
+                line-height: 86px;
+            }
+        }
+
+        &__video {
+            width: 690px;
+            height: 515px;
+            margin-top: 104px;
+            background-color: #F7F7F7;
+
+            .player-wrapper {
+                @include absoluteCenter();
+
+                .player {
+                    width: 690px;
+                    height: 422px;
+                }
+
+                .play {
+                    width: 157px;
+                    height: 157px;
+                    @include absoluteCenter(15px, 0px);
+                }
+            }
         }
     }
 }

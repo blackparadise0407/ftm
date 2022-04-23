@@ -1,12 +1,40 @@
 import { useEffect, useRef } from 'react';
+import ReactSlick, { Settings } from 'react-slick';
 import * as am4geodata from '@amcharts/amcharts4-geodata/worldLow';
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4maps from '@amcharts/amcharts4/maps';
 import * as am4themes from '@amcharts/amcharts4/themes/animated';
 
-import './styles.scss';
-import { BANNER } from 'assets/images';
+import { BANNER, PLAY, PLAYER } from 'assets/images';
 import { Button, TourCard, UserRanking } from 'components';
+
+import './styles.scss';
+
+const mockData = [
+  { rank: 2, likes: 202, status: 'up' },
+  { rank: 3, likes: 6342, status: 'down' },
+  { rank: 5, likes: 162, status: 'up' },
+  { rank: 6, likes: 152, status: 'down' },
+  { rank: 10, likes: 202, status: 'up' },
+  { rank: 32, likes: 1232, status: 'up' },
+  { rank: 12, likes: 2152, status: 'up' },
+  { rank: 315, likes: 323, status: 'down' },
+  { rank: 112, likes: 532, status: 'up' },
+  { rank: 21, likes: 571, status: 'down' },
+  { rank: 51, likes: 2321, status: 'up' },
+];
+
+const settings: Settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 8,
+  slidesToScroll: 1,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  draggable: true,
+};
 
 am4core.useTheme(am4themes.default);
 
@@ -94,9 +122,63 @@ export default function Landing() {
         <div className="container">
           <h3 className="h3 text-secondary">Leaders Board</h3>
           <div className="flex justify-center user-ranking-groups">
-            <UserRanking className="self-end" size="large" />
-            <UserRanking className="self-baseline" size="large" />
-            <UserRanking className="self-end" size="large" />
+            <UserRanking
+              className="self-end"
+              size="large"
+              data={{
+                likes: 2013,
+                status: 'up',
+                rank: 2,
+              }}
+            />
+            <UserRanking
+              className="self-baseline"
+              size="large"
+              data={{
+                likes: 2013,
+                status: 'up',
+                rank: 1,
+              }}
+            />
+            <UserRanking
+              className="self-end"
+              size="large"
+              data={{
+                likes: 2013,
+                status: 'down',
+                rank: 3,
+              }}
+            />
+          </div>
+        </div>
+        <ReactSlick className="slider" {...settings}>
+          {mockData.map((x, idx) => (
+            <div key={idx}>
+              <UserRanking data={x as any} />
+            </div>
+          ))}
+        </ReactSlick>
+      </section>
+      <section className="about">
+        <div className="container flex">
+          <div className="about__heading">
+            <div className="flex flex-col heading">
+              <span>
+                <span className="text-secondary">HERE</span>{' '}
+                <span className="text-gray-4">CAN BE</span>
+              </span>
+              <span>
+                <span className="text-gray-4">ANY</span>
+                <span className="text-secondary">WHERE!</span>
+              </span>
+            </div>
+            <Button>ABOUT US</Button>
+          </div>
+          <div className="about__video relative">
+            <div className="relative player-wrapper">
+              <img className="player" src={PLAYER} alt="" />
+              <img className="play" src={PLAY} alt="" />
+            </div>
           </div>
         </div>
       </section>

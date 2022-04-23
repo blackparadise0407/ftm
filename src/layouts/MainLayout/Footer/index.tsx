@@ -90,7 +90,9 @@ export default function Footer() {
       <div className="flex flex-col h-full container">
         <div className="flex w-full">
           <div className="left">
-            <h1 className="h1">fillthemap</h1>
+            <h1 className="h1" style={{ fontWeight: 400 }}>
+              fillthemap
+            </h1>
             {_renderLinkSection()}
           </div>
           <div className="flex-grow"></div>

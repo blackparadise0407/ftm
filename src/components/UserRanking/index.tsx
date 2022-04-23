@@ -31,7 +31,7 @@ export default memo(function UserRanking({
       className={clsx(
         'user-ranking flex',
         `user-ranking--${size}`,
-        isDefault ? 'flex-row' : 'flex-col',
+        isDefault ? 'flex-row items-center' : 'flex-col',
         className
       )}
       {...rest}
