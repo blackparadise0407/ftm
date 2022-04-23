@@ -6,6 +6,7 @@ import CLOCK from './clock.svg';
 import HEART from './heart.svg';
 import CHEV_DOWN from './chev-down.svg';
 import CHEV_UP from './chev-up.svg';
+import SEARCH from './search.svg';
 
 export { default as Clock } from './Clock';
 
@@ -18,4 +19,5 @@ export {
   YOUTUBE,
   INSTAGRAM,
   PINTEREST,
+  SEARCH,
 };

@@ -1,6 +1,11 @@
+import { NavLink } from 'react-router-dom';
+
 import { LOGO } from 'assets/images';
 import { Button } from 'components';
+
 import './styles.scss';
+
+const links = [{ to: '/tours', title: 'Tours' }];
 
 export default function Header() {
   return (
@@ -10,10 +15,23 @@ export default function Header() {
           <img src={LOGO} alt="logo" />
         </div>
         <ul className="flex uppercase">
-          <li className="h4">Tour</li>
-          <li className="h4">Guides</li>
-          <li className="h4">Themes</li>
-          <li className="h4">Destinations</li>
+          <li className="h4">
+            <NavLink to="/tours">Tour</NavLink>
+          </li>
+          <li className="h4">
+            <NavLink to="/guides">Guides</NavLink>
+          </li>
+          <li className="h4">
+            <NavLink to="/themes">Themes</NavLink>
+          </li>
+          <li className="h4">
+            <NavLink
+              className={({ isActive }) => (isActive ? 'link--active' : '')}
+              to="/destinations"
+            >
+              Destinations
+            </NavLink>
+          </li>
         </ul>
         <Button type="primary" variant="outlined">
           Log in
