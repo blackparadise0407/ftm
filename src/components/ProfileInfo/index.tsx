@@ -1,6 +1,7 @@
 import { CALENDAR, CHEV_RIGHT, HEART, PIN, USER } from 'assets/svgs';
 import clsx from 'clsx';
 import Avatar from 'components/Avatar';
+import { Link } from 'react-router-dom';
 
 import './styles.scss';
 
@@ -9,11 +10,17 @@ type Size = 'default' | 'small';
 interface ProfileInfoProps {
   size?: Size;
   isCard?: boolean;
+  data?: {
+    id: string;
+  };
 }
 
 export default function ProfileInfo({
   size = 'default',
   isCard = false,
+  data = {
+    id: 'patrick',
+  },
 }: ProfileInfoProps) {
   const isSmall = size === 'small';
 
@@ -48,12 +55,15 @@ export default function ProfileInfo({
             <span>1920</span>
           </div>
         </div>
-        <div className="profile-link flex items-center">
+        <Link
+          to={`/guides/${data.id}`}
+          className="profile-link flex items-center"
+        >
           <span className={clsx('text-primary', isSmall ? 'h6' : 'h5')}>
             See Profile
           </span>
           <img src={CHEV_RIGHT} alt="" />
-        </div>
+        </Link>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import {
   GUIDED,
   GUIDED_BLUE,
-  LANDSCAPE_BLUE,
+  LANDSCAPE_PRIMARY,
   SIGHTSEEING,
   SIGHTSEEING_BLUE,
 } from 'assets/svgs';
@@ -28,8 +28,8 @@ const tabs = [
   {
     to: 'landscape',
     title: 'Landscape Tour',
-    icon: LANDSCAPE_BLUE,
-    iconActive: LANDSCAPE_BLUE,
+    icon: LANDSCAPE_PRIMARY,
+    iconActive: LANDSCAPE_PRIMARY,
   },
 ];
 

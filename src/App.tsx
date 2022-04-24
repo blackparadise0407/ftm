@@ -5,6 +5,7 @@ import {
   GuideDetailPage,
   GuideListPage,
   LandingPage,
+  ThemeListPage,
   TourDetailPage,
   TourListPage,
 } from 'views';
@@ -18,6 +19,7 @@ function App() {
         <Route path="/tours/:id" element={<TourDetailPage />} />
         <Route path="/guides/" element={<GuideListPage />} />
         <Route path="/guides/:id" element={<GuideDetailPage />} />
+        <Route path="/themes" element={<ThemeListPage />} />
       </Route>
     </Routes>
   );
