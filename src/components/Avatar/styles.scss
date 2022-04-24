@@ -8,16 +8,8 @@
     background-color: transparent;
     border-radius: 50%;
     border: 3px solid $cerulean-blue;
-    // // border-image-slice: 1;
-    // // border-image-source: $linear-blue;
-    // background: $linear-blue border-box;
-    // -webkit-mask:
-    //     $linear-blue padding-box,
-    //     $linear-blue;
-    // -webkit-mask-composite: xor;
-    // mask-composite: exclude;
 
-    img {
+    .img {
         @include absoluteCenter();
         width: 144px;
         height: 144px;
@@ -47,4 +39,22 @@
             height: 23.33px;
         }
     }
+
+    &--small {
+        width: 111px;
+        height: 111px;
+
+        .img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .notification {
+            width: 30px;
+            height: 30px;
+            right: -1px;
+            top: -1px;
+        }
+    }
+
 }

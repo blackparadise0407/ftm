@@ -10,3 +10,4 @@ export { default as Filter } from './Filter';
 export { default as DetailedTourCard } from './DetailedTourCard';
 export { default as Profile } from './Profile';
 export { default as CompactTourCard } from './CompactTourCard';
+export { default as ProfileInfo } from './ProfileInfo';

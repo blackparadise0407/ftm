@@ -1,6 +1,4 @@
-import { CALENDAR, CHEV_RIGHT, HEART, PIN, USER } from 'assets/svgs';
-import Avatar from 'components/Avatar';
-import CompactTourCard from 'components/CompactTourCard';
+import ProfileInfo from 'components/ProfileInfo';
 import TourCard from 'components/TourCard';
 import { memo } from 'react';
 
@@ -9,34 +7,7 @@ import './styles.scss';
 export default memo(function Profile() {
   return (
     <div className="profile">
-      <div className="profile__info flex">
-        <Avatar />
-        <div className="info">
-          <h3 className="h3">Patrick Twomey</h3>
-          <div className="item-wrapper">
-            <div className="item">
-              <img src={PIN} alt="" />
-              <span>Canada</span>
-            </div>
-            <div className="item">
-              <img src={USER} alt="" />
-              <span>197 Followers</span>
-            </div>
-            <div className="item">
-              <img width="12.44px" src={CALENDAR} alt="" />
-              <span>Joined Feb 2022</span>
-            </div>
-            <div className="item">
-              <img src={HEART} alt="" />
-              <span>1920</span>
-            </div>
-          </div>
-          <div className="profile-link flex items-center">
-            <span className="h5 text-primary">See Profile</span>
-            <img src={CHEV_RIGHT} alt="" />
-          </div>
-        </div>
-      </div>
+      <ProfileInfo />
       <div className="profile__description">
         <p className="text-base">
           Since the age of 20, I have been looking for a way to promote the
