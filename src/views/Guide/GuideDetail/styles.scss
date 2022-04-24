@@ -1,0 +1,104 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
+.guide-detail {
+
+    &__banner {
+        height: 300px;
+        width: 100%;
+    }
+
+    &__main {
+        gap: 30px;
+
+        .main {
+            width: 930px;
+            margin-bottom: 129px;
+
+            .info {
+                position: relative;
+                gap: 30px;
+
+                .wrapper {
+                    width: 210px;
+
+                    .avatar-wrapper {
+                        position: absolute;
+                        width: 210px;
+                        height: 210px;
+                        border-radius: 50%;
+                        border: 3px solid $cerulean-blue;
+                        top: 0;
+                        transform: translateY(-50%);
+
+                        img {
+                            width: 196.88px;
+                            height: 196.88px;
+                            border-radius: 50%;
+                            @include absoluteCenter();
+                        }
+                    }
+                }
+
+
+                .extra-info {
+                    margin-top: 20px;
+
+                    .name {
+                        display: inline-block;
+                    }
+
+
+                    .item-list {
+                        margin-top: 20px;
+                        gap: 30px;
+
+                        .item {
+                            display: flex;
+                            gap: 10px;
+                        }
+                    }
+
+                    .action-list {
+                        gap: 30px;
+                        margin-top: 30px;
+                    }
+                }
+            }
+
+            .article {
+                margin-top: 40px;
+                margin-bottom: 60px;
+
+                .title {
+                    word-break: break-word;
+                    margin-bottom: 50px;
+                }
+
+                .h5 {
+                    margin-bottom: 30px;
+                }
+            }
+
+            .related-tour {
+
+                .tour-list {
+                    margin-top: 40px;
+                    // flex-wrap: wrap;
+                    gap: 30px;
+                }
+            }
+
+        }
+
+
+        .side {
+            margin-top: 58px;
+
+            .also-view {
+                margin-top: 20px;
+                gap: 20px;
+            }
+        }
+    }
+}

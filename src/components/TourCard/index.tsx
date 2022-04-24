@@ -41,7 +41,7 @@ export default memo(function TourCard({
       <div className="footer">
         <div className="flex items-center head-line">
           <img className="bg-primary" src={BADGE} alt="" />
-          <h6 className="h6 truncate">
+          <h6 className={clsx('h6', compact && 'truncate')}>
             Lorem Ipsum is simply dummy text of the print ing
           </h6>
         </div>

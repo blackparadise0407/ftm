@@ -8,6 +8,7 @@ import BADGE from './badge.png';
 import PLAYER from './player.png';
 import PLAY from './play.png';
 import CARD_IMAGE_2 from './card-img-2.png';
+import BANNER_3 from './banner-2.png';
 import BANNER_2 from './banner.png';
 
 export {
@@ -22,4 +23,5 @@ export {
   LOGO_BLUE,
   PLAY,
   PLAYER,
+  BANNER_3,
 };

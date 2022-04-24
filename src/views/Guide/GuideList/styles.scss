@@ -1,0 +1,54 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
+.guide-list {
+    .about {
+        min-height: 723px;
+
+        background-color: rgba($color: $jordy-blue, $alpha: 0.3);
+
+        &__heading {
+
+            .heading {
+                width: 690px;
+                height: 172px;
+                margin-bottom: 77px;
+                margin-top: 219px;
+                font-size: 68px;
+                font-weight: $font-bold;
+                line-height: 86px;
+            }
+        }
+
+        &__video {
+            width: 690px;
+            height: 515px;
+            margin-top: 104px;
+            background-color: #F7F7F7;
+
+            .player-wrapper {
+                @include absoluteCenter();
+
+                .player {
+                    width: 690px;
+                    height: 422px;
+                }
+
+                .play {
+                    width: 157px;
+                    height: 157px;
+                    @include absoluteCenter(15px, 0px);
+                }
+            }
+        }
+    }
+
+    .profile-info-list {
+        margin-top: 80px;
+        margin-bottom: 85px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        gap: 30px;
+    }
+}

@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { HTMLProps, memo } from 'react';
+import { HTMLProps, memo, ReactNode } from 'react';
 
 import './styles.scss';
 
@@ -11,6 +11,7 @@ interface ButtonProps extends Omit<HTMLProps<HTMLButtonElement>, 'size'> {
   variant?: 'filled' | 'outlined';
   type?: 'primary' | 'secondary';
   block?: boolean;
+  icon?: ReactNode;
 }
 
 export default memo(function Button({
@@ -21,6 +22,7 @@ export default memo(function Button({
   block = false,
   className,
   children,
+  icon,
   ...rest
 }: ButtonProps) {
   return (
@@ -36,6 +38,7 @@ export default memo(function Button({
       type={htmlType as any}
       {...rest}
     >
+      {icon && icon}
       {children}
     </button>
   );

@@ -14,7 +14,9 @@ export default memo(function Avatar({ size }: AvatarProps) {
   const isSmall = size === 'small';
 
   return (
-    <div className={clsx('avatar relative', isSmall && 'avatar--small')}>
+    <div
+      className={clsx('avatar-com relative', isSmall && 'avatar-com--small')}
+    >
       <img className="img" src="https://i.pravatar.cc/200" alt="" />
       <Button
         className={clsx(isSmall ? 'capitalize h6' : 'uppercase')}

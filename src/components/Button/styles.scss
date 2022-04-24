@@ -2,10 +2,14 @@
 
 .button {
   outline: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   border: 2px solid transparent;
   border-radius: 100px;
   font-size: $fs-base;
   font-weight: $font-bold;
+  font-family: $font;
   cursor: pointer;
 
   &--block {

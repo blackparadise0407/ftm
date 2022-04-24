@@ -18,11 +18,14 @@ import SIGHTSEEING_BLUE from './sightseeing-blue.svg';
 import BELL from './bell.svg';
 import USER from './user.svg';
 import CHEV_RIGHT from './chev-right.svg';
+import BI_HEART from './bi-heart.svg';
+import SHARE from './share.svg';
 
 export { default as Clock } from './Clock';
 
 export {
   CLOCK,
+  BI_HEART,
   HEART,
   CHEV_UP,
   CHEV_DOWN,
@@ -42,4 +45,5 @@ export {
   BELL,
   USER,
   CHEV_RIGHT,
+  SHARE,
 };
