@@ -31,7 +31,7 @@
 }
 
 .h6 {
-  font-weight: $font-normal;
+  font-weight: $font-bold;
   font-size: 14px;
   line-height: 20px;
 }
@@ -53,6 +53,10 @@
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
 
 .text-light {

@@ -2,4 +2,17 @@
 
 .tour-list {
   margin-top: 90px;
+  gap: 30px;
+
+  .tour-groups {
+    margin-top: 43px;
+
+    .grouped-title {
+      margin-bottom: 20px;
+    }
+
+    .detailed-tour-card {
+      margin-bottom: 20px;
+    }
+  }
 }

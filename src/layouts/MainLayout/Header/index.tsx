@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-import { LOGO, LOGO_BLUE } from 'assets/images';
+import { LOGO_BLUE } from 'assets/images';
 import { Button } from 'components';
 
 import './styles.scss';

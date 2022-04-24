@@ -7,13 +7,17 @@ import AVATAR from './avatar.png';
 import BADGE from './badge.png';
 import PLAYER from './player.png';
 import PLAY from './play.png';
+import CARD_IMAGE_2 from './card-img-2.png';
+import BANNER_2 from './banner.png';
 
 export {
   AVATAR,
-  BADGE,
   BANNER,
+  BADGE,
+  BANNER_2,
   FOOTER_IMG,
   CARD_IMAGE,
+  CARD_IMAGE_2,
   LOGO,
   LOGO_BLUE,
   PLAY,

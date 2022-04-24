@@ -64,4 +64,21 @@
         border-color: #7a7162;
     }
 
+    &--compact {
+        height: 274px;
+        width: 330px;
+        background-color: $white;
+
+        .time {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 5px 15px;
+            background-color: $white;
+            border-bottom-right-radius: 20px;
+        }
+
+        border-color: $gray-2;
+        box-shadow: none;
+    }
 }

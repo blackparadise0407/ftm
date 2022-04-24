@@ -1,0 +1,24 @@
+@import 'assets/styles/variables';
+
+.tour-list-navigation {
+    width: 930px;
+    height: 77px;
+    border-radius: 5px;
+
+    &__item {
+        position: relative;
+        display: flex;
+        width: 231px;
+        height: 68px;
+        justify-content: center;
+        color: $white;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        gap: 15px;
+
+        &--active {
+            background-color: $white;
+            color: $cerulean-blue;
+        }
+    }
+}

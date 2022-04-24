@@ -5,7 +5,7 @@ import Header from './Header';
 
 export default function MainLayout() {
   return (
-    <div style={{ backgroundColor: '#e5e5e5' }}>
+    <div style={{ backgroundColor: '#FAFBFD' }}>
       <Header />
       <main>
         <Outlet />

@@ -1,4 +1,4 @@
-import { SEARCH } from 'assets/svgs';
+import { CALENDAR, SEARCH } from 'assets/svgs';
 import Checkbox from 'components/Checkbox';
 import Input from 'components/Input';
 import { memo, useState } from 'react';
@@ -103,6 +103,7 @@ export default memo(function Filter() {
       </div>
       <div className="filter__section">
         <h5 className="h5 title">Date Range</h5>
+        <Input icon={<img src={CALENDAR} alt="icon" />} />
       </div>
       <div className="filter__section">
         <h5 className="h5 title">Categories</h5>

@@ -1,0 +1,62 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
+.detailed-tour-card {
+    max-width: 930px;
+    height: 150px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: rgba($color: $white, $alpha: 0.2);
+    backdrop-filter: blur(4px);
+    border: 1px solid #bcbcbe;
+
+    &__image {
+        width: 330px;
+
+        .hour {
+            position: absolute;
+            padding: 5px 15px;
+            border-bottom-right-radius: 20px;
+            background-color: $white;
+            color: $cerulean-blue;
+        }
+
+        .avatar {
+            $size: 50px;
+            $border-width: 6px;
+            position: absolute;
+            right: 16px;
+            bottom: 14px;
+            width: $size;
+            height: $size;
+            border-radius: 50%;
+            background-color: $white;
+
+            img {
+                width: calc(#{$size} - #{$border-width});
+                height: calc(#{$size} - #{$border-width});
+                border-radius: 50%;
+                @include absoluteCenter();
+            }
+        }
+    }
+
+    &__info {
+        padding: 20px 20px 20px 30px;
+
+        .info-group {
+            & *+* {
+                margin-top: 5px;
+            }
+
+            p {
+                gap: 7px;
+            }
+
+        }
+
+        button {
+            margin-top: 25px;
+        }
+    }
+}
