@@ -8,6 +8,8 @@ export { default as Avatar } from './Avatar';
 export { default as TourCard } from './TourCard';
 export { default as Filter } from './Filter';
 export { default as DetailedTourCard } from './DetailedTourCard';
+export { default as ReviewTourCard } from './ReviewTourCard';
 export { default as Profile } from './Profile';
 export { default as CompactTourCard } from './CompactTourCard';
 export { default as ProfileInfo } from './ProfileInfo';
+export { default as CustomLink } from './CustomLink';

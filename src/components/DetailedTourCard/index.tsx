@@ -1,8 +1,10 @@
-import { CARD_IMAGE_2 } from 'assets/images';
-import { PIN, STAR } from 'assets/svgs';
-import Button from 'components/Button';
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
+
+import { CARD_IMAGE_2 } from 'assets/images';
+import { PIN, STAR } from 'assets/svgs';
+import { Button } from 'components';
+
 import './styles.scss';
 
 interface DetailedTourCardProps {}

@@ -1,0 +1,66 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
+.guide-card {
+    height: 300px;
+    width: 451px;
+    border-radius: 26px;
+    border: 1px solid #97b1c3;
+    background-color: rgba($color: $gray-3, $alpha: 0.2);
+    backdrop-filter: blur(4px);
+    padding: 30px;
+
+    &__type {
+        gap: 20px;
+    }
+
+    h4.h4.title {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    &__info {
+        gap: 10px;
+
+        img.avatar {
+            width: 50px;
+            height: 50px;
+
+        }
+    }
+
+    &__reviews {
+        gap: 10px;
+        margin-top: 10px;
+
+        .review-point {
+            gap: 5px;
+        }
+    }
+
+    &__extras {
+        display: grid;
+        margin-top: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    &__noti {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        top: 50%;
+        right: 0;
+        transform: translate(50%, -50%);
+
+        img {
+            @include absoluteCenter();
+        }
+    }
+}

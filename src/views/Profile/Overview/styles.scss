@@ -1,0 +1,41 @@
+@import 'assets/styles/variables';
+
+.overview {
+
+    &__action-list {
+        display: flex;
+        margin-top: 35px;
+        margin-bottom: 30px;
+        gap: 100px;
+
+        .action {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            span {
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    #chartdiv {
+        width: 930px;
+        height: 490.06px;
+        background: $linear-blue;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .forget-review {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    .tour-card-list {
+        margin-bottom: 60px;
+        gap: 30px;
+    }
+
+
+}

@@ -1,0 +1,35 @@
+@import 'assets/styles/variables';
+
+.my-tour {
+
+    &__action-list {
+        display: flex;
+        margin-top: 35px;
+        margin-bottom: 30px;
+        gap: 100px;
+
+        .action {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            span {
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    h5.h5.title {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__tour-list {
+        gap: 30px;
+    }
+
+    .view-all {
+        margin-top: 30px;
+        margin-bottom: 94px;
+    }
+}

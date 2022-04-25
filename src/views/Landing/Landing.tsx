@@ -6,6 +6,11 @@ import * as am4maps from '@amcharts/amcharts4/maps';
 import * as am4themes from '@amcharts/amcharts4/themes/animated';
 
 import { BANNER, PLAY, PLAYER } from 'assets/images';
+import {
+  GUIDED_DISABLED,
+  LANDSCAPE_PRIMARY,
+  SIGHTSEEING_DISABLED,
+} from 'assets/svgs';
 import { Button, TourCard, UserRanking } from 'components';
 
 import './styles.scss';
@@ -109,7 +114,15 @@ export default function Landing() {
       {/* New tour section */}
       <section className="new text-white">
         <div className="container">
-          <h3 className="h3 text-secondary">New Tour</h3>
+          <div className="flex items-center">
+            <h3 className="h3 text-secondary">New Tour</h3>
+            <div className="flex-grow"></div>
+            <div className="tour-type flex">
+              <img src={GUIDED_DISABLED} alt="" />
+              <img src={SIGHTSEEING_DISABLED} alt="" />
+              <img src={LANDSCAPE_PRIMARY} alt="" />
+            </div>
+          </div>
           <div className="flex card-groups">
             <TourCard />
             <TourCard />

@@ -1,0 +1,33 @@
+@import 'assets/styles/variables';
+
+.profile-page {
+
+    &__main {
+        margin-top: 59px;
+        gap: 30px;
+    }
+
+    &__navigation {
+        max-width: 450px;
+        width: 100%;
+        height: fit-content;
+        border: 1px solid $jordy-blue;
+        border-radius: 20px;
+        overflow: hidden;
+
+        .item {
+            padding: 19px 40px;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $jordy-blue;
+            }
+
+            &--active {
+                background-color: $cerulean-blue;
+                color: $white;
+            }
+        }
+
+
+    }
+}

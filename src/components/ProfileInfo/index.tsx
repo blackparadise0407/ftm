@@ -1,7 +1,8 @@
-import { CALENDAR, CHEV_RIGHT, HEART, PIN, USER } from 'assets/svgs';
 import clsx from 'clsx';
+
+import { CALENDAR, HEART, PIN, USER } from 'assets/svgs';
 import Avatar from 'components/Avatar';
-import { Link } from 'react-router-dom';
+import CustomLink from 'components/CustomLink';
 
 import './styles.scss';
 
@@ -55,15 +56,7 @@ export default function ProfileInfo({
             <span>1920</span>
           </div>
         </div>
-        <Link
-          to={`/guides/${data.id}`}
-          className="profile-link flex items-center"
-        >
-          <span className={clsx('text-primary', isSmall ? 'h6' : 'h5')}>
-            See Profile
-          </span>
-          <img src={CHEV_RIGHT} alt="" />
-        </Link>
+        <CustomLink title="See Profile" small to={`/guides/${data.id}`} />
       </div>
     </div>
   );

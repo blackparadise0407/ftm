@@ -43,7 +43,7 @@ const _renderUser = (onSignOut: () => void) => {
         <div className="item">
           <span className="h5">Top-Up</span>
         </div>
-        <Link to="/profile">
+        <Link to="/profile/patrick">
           <div className="item flex items-center item--profile text-dark">
             <img className="avatar" src="https://i.pravatar.cc/200" alt="" />
             <span className="h5">Profile</span>

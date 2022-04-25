@@ -9,7 +9,7 @@ interface ButtonProps extends Omit<HTMLProps<HTMLButtonElement>, 'size'> {
   htmlType?: ButtonHTMLType;
   size?: 'default' | 'small';
   variant?: 'filled' | 'outlined';
-  type?: 'primary' | 'secondary';
+  type?: 'primary' | 'secondary' | 'info';
   block?: boolean;
   icon?: ReactNode;
 }

@@ -1,7 +1,15 @@
+@import 'assets/styles/variables';
+
 .tour-detail {
 
     &__banner {
         height: 500px;
+    }
+
+
+
+    .main-wrapper {
+        gap: 30px;
     }
 
     &__main {
@@ -11,10 +19,18 @@
 
         .about {
             margin-bottom: 60px;
-
-
         }
 
+    }
+
+    &__side {
+
+        .wrapper {
+            position: absolute;
+            top: -350px;
+            left: 0;
+            gap: 30px;
+        }
     }
 
     .title {

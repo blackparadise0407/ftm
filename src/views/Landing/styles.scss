@@ -63,6 +63,15 @@
     .new {
         margin-top: 80px;
 
+        .tour-type {
+            gap: 27px;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
         .card-groups {
             margin-top: 38px;
             gap: 30px;

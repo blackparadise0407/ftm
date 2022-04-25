@@ -1,5 +1,7 @@
 import { BANNER_2 } from 'assets/images';
 import { Profile, TourCard } from 'components';
+import ActionGuideCard from './ActionGuideCard';
+import GuideCard from './GuideCard';
 
 import './styles.scss';
 
@@ -8,9 +10,12 @@ export default function TourDetail() {
     <div className="tour-detail">
       <div
         className="tour-detail__banner"
-        style={{ background: `url(${BANNER_2}) center no-repeat` }}
+        style={{
+          background: `url(${BANNER_2}) center no-repeat`,
+          backgroundSize: 'cover',
+        }}
       ></div>
-      <div className="container">
+      <div className="container flex main-wrapper">
         <div className="tour-detail__main">
           <div className="about">
             <h5 className="h5 text-secondary capitalize title">
@@ -31,6 +36,17 @@ export default function TourDetail() {
               Get to know your guides
             </h5>
             <Profile />
+          </div>
+        </div>
+        <div className="tour-detail__side relative">
+          <div className="wrapper flex flex-col absolute">
+            <GuideCard />
+            <ActionGuideCard buttonText="Book tour" />
+            <ActionGuideCard buttonText="Book tour" />
+            <ActionGuideCard
+              buttonText="Follow"
+              body="New date announcement?"
+            />
           </div>
         </div>
       </div>

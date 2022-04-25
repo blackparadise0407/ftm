@@ -1,0 +1,50 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
+.review-tour-card {
+    max-width: 930px;
+    height: 150px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: rgba($color: $white, $alpha: 0.2);
+    backdrop-filter: blur(4px);
+    border: 1px solid #bcbcbe;
+
+    &__image {
+        width: 330px;
+    }
+
+    &__info {
+        padding: 21px 30px;
+
+
+        img.avatar {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
+        .info-group {
+            gap: 11px;
+            margin-bottom: 15px;
+
+            .location {
+                gap: 7px;
+            }
+
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+
+        button {
+            margin-top: 25px;
+        }
+    }
+
+    .edit-icon {
+        top: 5px;
+        right: 30px;
+    }
+}
