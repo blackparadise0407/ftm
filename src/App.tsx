@@ -5,6 +5,8 @@ import {
   GuideDetailPage,
   GuideListPage,
   LandingPage,
+  NotFoundPage,
+  ProfilePage,
   ThemeListPage,
   TourDetailPage,
   TourListPage,
@@ -20,6 +22,8 @@ function App() {
         <Route path="/guides/" element={<GuideListPage />} />
         <Route path="/guides/:id" element={<GuideDetailPage />} />
         <Route path="/themes" element={<ThemeListPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
   );

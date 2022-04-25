@@ -23,6 +23,10 @@
             border-bottom: 1px solid #2E65BA;
         }
 
+        &:last-child {
+            padding-bottom: 40px;
+        }
+
         .options {
             gap: 20px;
         }

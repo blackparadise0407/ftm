@@ -33,7 +33,7 @@ export default function ProfileInfo({
       )}
     >
       <Avatar size={size} />
-      <div className="info">
+      <div className="info flex-grow">
         <span className={clsx(isSmall ? 'h4 uppercase' : 'h3')}>
           Patrick Twomey
         </span>

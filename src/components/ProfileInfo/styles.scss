@@ -7,7 +7,7 @@
 
         .item-wrapper {
             display: grid;
-            grid-template-columns: 200px 200px;
+            grid-template-columns: repeat(2, 200px);
             margin-top: 10px;
             column-gap: 1px;
             row-gap: 10px;
@@ -33,7 +33,7 @@
 
             .item-wrapper {
                 margin-top: 15px;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     }

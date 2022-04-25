@@ -4,8 +4,9 @@ import PINTEREST from './pinterest.svg';
 import YOUTUBE from './youtube.svg';
 import CLOCK from './clock.svg';
 import HEART from './heart.svg';
+import CARET_DOWN from './caret-down.svg';
 import CHEV_DOWN from './chev-down.svg';
-import CHEV_UP from './chev-up.svg';
+import CARET_UP from './caret-up.svg';
 import SEARCH from './search.svg';
 import CALENDAR from './calendar.svg';
 import PIN from './pin.svg';
@@ -28,7 +29,8 @@ export {
   CLOCK,
   BI_HEART,
   HEART,
-  CHEV_UP,
+  CARET_UP,
+  CARET_DOWN,
   CHEV_DOWN,
   FACEBOOK,
   YOUTUBE,

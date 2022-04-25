@@ -1,35 +1,110 @@
 @import "assets/styles/variables";
 
 header {
-  height: 91px;
-  padding: 0 $spacing-h-lg;
-  background: $white;
-  box-shadow: -1px 7px 20px -1px #aeaeae;
-  -webkit-box-shadow: -1px 7px 20px -1px #aeaeae;
-  -moz-box-shadow: -1px 7px 20px -1px #aeaeae;
-  // border-bottom-left-radius: 20px;
-  // border-bottom-right-radius: 20px;
+    height: 91px;
+    padding: 0 $spacing-h-lg;
+    background: $white;
+    box-shadow: -1px 7px 20px -1px #aeaeae;
+    -webkit-box-shadow: -1px 7px 20px -1px #aeaeae;
+    -moz-box-shadow: -1px 7px 20px -1px #aeaeae;
+    // border-bottom-left-radius: 20px;
+    // border-bottom-right-radius: 20px;
 
 
-  .logo {
-    img {
-      width: 248px;
-      height: 80px;
-    }
-  }
+    .logo {
 
-  ul {
-    gap: 30px;
-    // margin-left: $spacing-h-lg;
-
-    li {
-      .link {
-        color: $gray-3;
-
-        &--active {
-          color: $cerulean-blue;
+        img {
+            width: 248px;
+            height: 80px;
         }
-      }
     }
-  }
+
+    ul {
+        gap: 30px;
+        // margin-left: $spacing-h-lg;
+
+        li {
+            .link {
+                color: $gray-3;
+
+                &--active {
+                    color: $cerulean-blue;
+                }
+            }
+        }
+    }
+
+    .user-info-wrapper {
+
+        &__user {
+            gap: 10px;
+
+            img.avatar {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+        }
+
+        &__drop-down {
+            --pseudo-height: 25px;
+            display: none;
+            right: 0;
+            top: calc(100% + var(--pseudo-height));
+            min-width: 210px;
+            background: $white;
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            z-index: 1;
+
+            &:hover {
+                display: block;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                bottom: 100%;
+                height: calc(var(--pseudo-height) + 2px);
+            }
+
+            .item {
+                padding: 15px 33px;
+
+                &:hover {
+                    background: $linear-blue;
+                    color: $white;
+                    cursor: pointer;
+                }
+
+                &--profile {
+                    gap: 10px;
+
+                    img.avatar {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                    }
+                }
+
+                &:first-child {
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                }
+
+                &:last-child {
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+            }
+        }
+
+        &__user {
+
+            &:hover~.user-info-wrapper__drop-down {
+                display: block;
+            }
+        }
+    }
 }

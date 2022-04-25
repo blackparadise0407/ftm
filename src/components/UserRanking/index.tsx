@@ -2,7 +2,7 @@ import { HTMLProps, memo, useMemo } from 'react';
 import clsx from 'clsx';
 
 import './styles.scss';
-import { CHEV_DOWN, CHEV_UP, HEART } from 'assets/svgs';
+import { CARET_DOWN, CARET_UP, HEART } from 'assets/svgs';
 
 interface UserRankingProps
   extends Omit<HTMLProps<HTMLDivElement>, 'data' | 'size'> {
@@ -40,7 +40,7 @@ export default memo(function UserRanking({
         {!isDefault && (
           <img
             className="status"
-            src={data.status === 'down' ? CHEV_DOWN : CHEV_UP}
+            src={data.status === 'down' ? CARET_DOWN : CARET_UP}
             alt=""
           />
         )}
@@ -62,7 +62,7 @@ export default memo(function UserRanking({
           {isDefault && (
             <img
               className="status"
-              src={data.status === 'down' ? CHEV_DOWN : CHEV_UP}
+              src={data.status === 'down' ? CARET_DOWN : CARET_UP}
               alt=""
             />
           )}
