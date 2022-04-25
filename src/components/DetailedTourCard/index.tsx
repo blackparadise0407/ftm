@@ -9,6 +9,7 @@ import './styles.scss';
 
 interface DetailedTourCardProps {}
 
+// eslint-disable-next-line no-empty-pattern
 export default memo(function DetailedTourCard({}: DetailedTourCardProps) {
   return (
     <div className="detailed-tour-card flex overflow-hidden">

@@ -6,7 +6,6 @@ import {
   GUIDED_BLUE,
   HEART,
   LANDSCAPE_PRIMARY,
-  PIN,
   PinOutlined,
   SIGHTSEEING_BLUE,
   STAR_FILL,
@@ -15,6 +14,7 @@ import './styles.scss';
 
 interface GuideCardProps {}
 
+// eslint-disable-next-line no-empty-pattern
 export default function GuideCard({}: GuideCardProps) {
   return (
     <div className="guide-card relative">
