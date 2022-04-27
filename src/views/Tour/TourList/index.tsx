@@ -13,6 +13,7 @@ export default function TourList() {
     if (!query.tab) {
       setQuery({ tab: 'landscape' });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
