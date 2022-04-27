@@ -6,8 +6,14 @@
     height: 450px;
     border-radius: 26px;
     background-color: rgba($color: $gray-3, $alpha: 0.2);
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
     border: 1px solid transparent;
+    transition: box-shadow ease 0.2s;
+
+    &:hover {
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+        -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    }
 
     .header {
         height: 100px;

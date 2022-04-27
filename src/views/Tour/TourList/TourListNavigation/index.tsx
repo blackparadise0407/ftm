@@ -11,7 +11,7 @@ import { memo } from 'react';
 
 import './styles.scss';
 
-type Tab = 'guided' | 'sightseeing' | 'landscape';
+type Tab = TourType;
 
 interface TourListNavigationProps {
   onTabChange?: (tab: Tab) => void;

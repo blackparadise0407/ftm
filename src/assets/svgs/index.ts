@@ -14,10 +14,13 @@ import STAR from './star.svg';
 import STAR_FILL from './star-fill.svg';
 import GUIDED_BLUE from './guided-blue.svg';
 import GUIDED_DISABLED from './guided-disabled.svg';
+import GUIDED_BLUE_40 from './guided-blue-40.svg';
 import GUIDED from './guided.svg';
 import LANDSCAPE_PRIMARY from './landscape-blue.svg';
+import LANDSCAPE_BLUE_40 from './landscape-blue-40.svg';
 import SIGHTSEEING from './sightseeing.svg';
 import SIGHTSEEING_BLUE from './sightseeing-blue.svg';
+import SIGHTSEEING_BLUE_40 from './sightseeing-blue-40.svg';
 import SIGHTSEEING_DISABLED from './sightseeing-disabled.svg';
 import BELL from './bell.svg';
 import USER from './user.svg';
@@ -25,6 +28,7 @@ import CHEV_RIGHT from './chev-right.svg';
 import BI_HEART from './bi-heart.svg';
 import SHARE from './share.svg';
 import LANDSCAPE_SECONDARY from './landscape-secondary.svg';
+import LANDSCAPE_DISABLED from './landscape-disabled.svg';
 import COMMENT from './comment.svg';
 import CROWD from './crowd.svg';
 
@@ -66,4 +70,8 @@ export {
   STAR_FILL,
   COMMENT,
   CROWD,
+  LANDSCAPE_BLUE_40,
+  GUIDED_BLUE_40,
+  SIGHTSEEING_BLUE_40,
+  LANDSCAPE_DISABLED,
 };

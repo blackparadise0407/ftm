@@ -1,0 +1,23 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
+.player {
+    &__play-btn {
+        width: 157px;
+        height: 157px;
+        @include absoluteCenter(15px, 0px);
+        pointer-events: all;
+        cursor: pointer;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0);
+        z-index: 1;
+        pointer-events: all;
+    }
+}

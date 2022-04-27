@@ -11,3 +11,4 @@ export { default as ReviewTourCard } from './ReviewTourCard';
 export { default as Profile } from './Profile';
 export { default as ProfileInfo } from './ProfileInfo';
 export { default as CustomLink } from './CustomLink';
+export { default as Player } from './Player';

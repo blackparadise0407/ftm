@@ -1,5 +1,4 @@
-import { PLAY, PLAYER } from 'assets/images';
-import { Button, ProfileInfo } from 'components';
+import { Button, Player, ProfileInfo } from 'components';
 import './styles.scss';
 
 export default function GuideList() {
@@ -19,11 +18,8 @@ export default function GuideList() {
               ABOUT US
             </Button>
           </div>
-          <div className="about__video relative">
-            <div className="relative player-wrapper">
-              <img className="player" src={PLAYER} alt="" />
-              <img className="play" src={PLAY} alt="" />
-            </div>
+          <div className="about__video relative flex flex-col justify-center">
+            <Player />
           </div>
         </div>
       </div>

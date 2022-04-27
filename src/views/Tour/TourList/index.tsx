@@ -1,10 +1,20 @@
-import { DetailedTourCard, Filter } from 'components';
+import { useEffect } from 'react';
 
+import { DetailedTourCard, Filter } from 'components';
+import { useQueryParams } from 'hooks';
 import TourListNavigation from './TourListNavigation';
 
 import './styles.scss';
 
 export default function TourList() {
+  const [query, setQuery] = useQueryParams<{ tab: TourType }>();
+
+  useEffect(() => {
+    if (!query.tab) {
+      setQuery({ tab: 'guided' });
+    }
+  }, []);
+
   return (
     <div className="container flex tour-list">
       <Filter />

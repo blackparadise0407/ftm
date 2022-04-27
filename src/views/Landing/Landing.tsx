@@ -1,17 +1,20 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import ReactSlick, { Settings } from 'react-slick';
 import * as am4geodata from '@amcharts/amcharts4-geodata/worldLow';
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4maps from '@amcharts/amcharts4/maps';
 import * as am4themes from '@amcharts/amcharts4/themes/animated';
 
-import { BANNER, PLAY, PLAYER } from 'assets/images';
+import { BANNER } from 'assets/images';
 import {
+  GUIDED_BLUE_40,
   GUIDED_DISABLED,
-  LANDSCAPE_PRIMARY,
+  LANDSCAPE_BLUE_40,
+  LANDSCAPE_DISABLED,
+  SIGHTSEEING_BLUE_40,
   SIGHTSEEING_DISABLED,
 } from 'assets/svgs';
-import { Button, TourCard, UserRanking } from 'components';
+import { Button, Player, TourCard, UserRanking } from 'components';
 
 import './styles.scss';
 
@@ -46,6 +49,8 @@ const settings: Settings = {
 am4core.useTheme(am4themes.default);
 
 export default function Landing() {
+  const [tourType, setTourType] = useState<TourType>('guided');
+
   const chart = useRef<any>(null);
   useEffect(() => {
     let map = am4core.create('chartdiv', am4maps.MapChart);
@@ -121,9 +126,29 @@ export default function Landing() {
             <h3 className="h3 text-secondary">New Tour</h3>
             <div className="flex-grow"></div>
             <div className="tour-type flex">
-              <img src={GUIDED_DISABLED} alt="" />
-              <img src={SIGHTSEEING_DISABLED} alt="" />
-              <img src={LANDSCAPE_PRIMARY} alt="" />
+              <img
+                src={tourType === 'guided' ? GUIDED_BLUE_40 : GUIDED_DISABLED}
+                alt=""
+                onClick={() => setTourType('guided')}
+              />
+              <img
+                src={
+                  tourType === 'sightseeing'
+                    ? SIGHTSEEING_BLUE_40
+                    : SIGHTSEEING_DISABLED
+                }
+                alt=""
+                onClick={() => setTourType('sightseeing')}
+              />
+              <img
+                src={
+                  tourType === 'landscape'
+                    ? LANDSCAPE_BLUE_40
+                    : LANDSCAPE_DISABLED
+                }
+                alt=""
+                onClick={() => setTourType('landscape')}
+              />
             </div>
           </div>
           <div className="flex card-groups">
@@ -190,11 +215,8 @@ export default function Landing() {
             </div>
             <Button>ABOUT US</Button>
           </div>
-          <div className="about__video relative">
-            <div className="relative player-wrapper">
-              <img className="player" src={PLAYER} alt="" />
-              <img className="play" src={PLAY} alt="" />
-            </div>
+          <div className="about__video relative flex flex-col justify-center">
+            <Player />
           </div>
         </div>
       </section>

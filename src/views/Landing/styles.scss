@@ -69,6 +69,12 @@
             img {
                 width: 40px;
                 height: 40px;
+                cursor: pointer;
+                transition: transform ease 0.2s;
+
+                &:hover {
+                    transform: scale(1.15);
+                }
             }
         }
 
@@ -127,21 +133,6 @@
             height: 515px;
             margin-top: 104px;
             background-color: #F7F7F7;
-
-            .player-wrapper {
-                @include absoluteCenter();
-
-                .player {
-                    width: 690px;
-                    height: 422px;
-                }
-
-                .play {
-                    width: 157px;
-                    height: 157px;
-                    @include absoluteCenter(15px, 0px);
-                }
-            }
         }
     }
 }

@@ -11,6 +11,7 @@
   font-size: $fs-base;
   font-weight: $font-bold;
   font-family: $font;
+  transition: background-color ease 0.2s, color ease 0.2s, border-color ease 0.2s;
   cursor: pointer;
 
   &--block {
@@ -19,21 +20,21 @@
   }
 
   &--primary {
-    border-color: $cerulean-blue;
-    background-color: $cerulean-blue;
-    color: $cerulean-blue;
+    --border-color: #{$cerulean-blue};
+    --background-color: #{$cerulean-blue};
+    --color: #{$cerulean-blue};
   }
 
   &--info {
-    border-color: $jordy-blue;
-    background-color: $jordy-blue;
-    color: $jordy-blue;
+    --border-color: #{$jordy-blue};
+    --background-color: #{$jordy-blue};
+    --color: #{$jordy-blue};
   }
 
   &--secondary {
-    border-color: $vivid-tangelo;
-    background-color: $vivid-tangelo;
-    color: $vivid-tangelo;
+    --border-color: #{$vivid-tangelo};
+    --background-color: #{$vivid-tangelo};
+    --color: #{$vivid-tangelo};
   }
 
   &--default {
@@ -50,9 +51,23 @@
 
   &--outlined {
     background-color: $white;
+    border-color: var(--border-color);
+    color: var(--color);
+
+    &:hover {
+      background-color: var(--background-color);
+      color: $white;
+    }
   }
 
   &--filled {
     color: $white;
+    background-color: var(--background-color);
+
+    &:hover {
+      background-color: $white;
+      border-color: var(--border-color);
+      color: var(--color);
+    }
   }
 }

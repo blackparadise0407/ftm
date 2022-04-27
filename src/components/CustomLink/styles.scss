@@ -2,4 +2,9 @@
 
 .custom-link {
     gap: 10px;
+    transition: color ease 0.2s;
+
+    &:hover {
+        color: lighten($color: $cerulean-blue, $amount: 20%);
+    }
 }

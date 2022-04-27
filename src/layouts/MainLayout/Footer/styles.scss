@@ -11,7 +11,12 @@ footer {
       gap: 100px;
 
       .section {
-        .title {
+
+        li {
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
 
         ul {

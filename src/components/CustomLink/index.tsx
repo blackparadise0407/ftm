@@ -13,7 +13,7 @@ interface CustomLinkProps extends LinkProps {
 export default function CustomLink({ title = '', to, small }: CustomLinkProps) {
   return (
     <Link to={to} className="custom-link flex items-center">
-      <span className={clsx('text-primary', small ? 'h6' : 'h5')}>{title}</span>
+      <span className={clsx(small ? 'h6' : 'h5')}>{title}</span>
       <img src={CHEV_RIGHT} alt="" />
     </Link>
   );
