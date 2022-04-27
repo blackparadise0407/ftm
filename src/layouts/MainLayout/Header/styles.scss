@@ -1,16 +1,25 @@
 @import "assets/styles/variables";
 
-header {
+header.header {
     top: 0;
     left: 0;
     right: 0;
     height: 91px;
     padding: 0 $spacing-h-lg;
     background: $white;
-    box-shadow: -1px 7px 20px -1px #aeaeae;
-    -webkit-box-shadow: -1px 7px 20px -1px #aeaeae;
-    -moz-box-shadow: -1px 7px 20px -1px #aeaeae;
+    box-shadow: 0px 5px 20px -5px #605c5c;
+    -webkit-box-shadow: 0px 5px 20px -5px #605c5c;
+    -moz-box-shadow: 0px 5px 20px -5px #605c5c;
     z-index: 100;
+    transform: translateY(0);
+    transition: transform ease 0.3s;
+
+    &--hidden {
+        transform: translateY(-100%);
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+    }
 
     .logo {
 

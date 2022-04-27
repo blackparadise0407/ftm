@@ -86,8 +86,8 @@ export default function Header() {
   return (
     <header
       className={clsx(
-        'fixed text-white flex items-center',
-        show ? 'flex' : 'hidden'
+        'header fixed flex text-white flex items-center',
+        !show && 'header--hidden'
       )}
     >
       <div className="container w-full flex items-center justify-between">
