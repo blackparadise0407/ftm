@@ -1,11 +1,13 @@
 import { Outlet } from 'react-router-dom';
-import Footer from './Footer';
 
 import Header from './Header';
+import Footer from './Footer';
+
+import './styles.scss';
 
 export default function MainLayout() {
   return (
-    <div style={{ backgroundColor: '#FAFBFD' }}>
+    <div className="main-layout">
       <Header />
       <main>
         <Outlet />

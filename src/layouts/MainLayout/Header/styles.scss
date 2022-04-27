@@ -1,6 +1,9 @@
 @import "assets/styles/variables";
 
 header {
+    top: 0;
+    left: 0;
+    right: 0;
     height: 91px;
     padding: 0 $spacing-h-lg;
     background: $white;
@@ -9,13 +12,15 @@ header {
     -moz-box-shadow: -1px 7px 20px -1px #aeaeae;
     // border-bottom-left-radius: 20px;
     // border-bottom-right-radius: 20px;
+    z-index: 100;
 
+    transition: all ease 0.4s;
 
     .logo {
 
         img {
             width: 248px;
-            height: 80px;
+            height: 62px;
         }
     }
 
@@ -28,6 +33,10 @@ header {
                 color: $gray-3;
 
                 &--active {
+                    color: $cerulean-blue;
+                }
+
+                &:hover {
                     color: $cerulean-blue;
                 }
             }

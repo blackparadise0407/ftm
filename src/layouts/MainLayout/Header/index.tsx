@@ -1,3 +1,4 @@
+import { useCallback, useState } from 'react';
 import clsx from 'clsx';
 import { Link, NavLink } from 'react-router-dom';
 
@@ -5,6 +6,7 @@ import { LOGO_BLUE } from 'assets/images';
 import { CHEV_DOWN } from 'assets/svgs';
 import { Button } from 'components';
 import { useAuthContext } from 'contexts';
+import { useEventListener } from 'hooks';
 
 import './styles.scss';
 
@@ -59,10 +61,36 @@ const _renderUser = (onSignOut: () => void) => {
 
 export default function Header() {
   const { isAuth, onLogin, onSignOut } = useAuthContext();
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [show, setShow] = useState(true);
+
+  const handleNavigation = useCallback(
+    (e: any) => {
+      const window = e.currentTarget;
+      if (typeof window !== 'undefined') {
+        if (window.scrollY > lastScrollY) {
+          // Scrolling down
+          setShow(false);
+        } else {
+          // Scrolling up
+          setShow(true);
+        }
+        setLastScrollY(window.scrollY);
+      }
+    },
+    [lastScrollY]
+  );
+
+  useEventListener('scroll', handleNavigation);
 
   return (
-    <header className="text-white">
-      <div className="container flex items-center justify-between">
+    <header
+      className={clsx(
+        'fixed text-white flex items-center',
+        show ? 'flex' : 'hidden'
+      )}
+    >
+      <div className="container w-full flex items-center justify-between">
         <div className="logo">
           <Link to="/">
             <img src={LOGO_BLUE} alt="logo" />

@@ -39,6 +39,8 @@ const settings: Settings = {
   autoplay: true,
   autoplaySpeed: 5000,
   draggable: true,
+  pauseOnHover: true,
+  rtl: true,
 };
 
 am4core.useTheme(am4themes.default);
@@ -67,6 +69,7 @@ export default function Landing() {
     hs.properties.fill = am4core.color('#6c85b8');
 
     map.zoomControl = new am4maps.ZoomControl();
+    map.chartContainer.wheelable = false;
     map.homeZoomLevel = 5;
     map.homeGeoPoint = {
       latitude: 20,

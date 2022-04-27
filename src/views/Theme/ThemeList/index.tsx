@@ -1,3 +1,4 @@
+import { BANNER_4 } from 'assets/images';
 import { LANDSCAPE_SECONDARY } from 'assets/svgs';
 import { Button, TourCard } from 'components';
 import './styles.scss';
@@ -5,6 +6,13 @@ import './styles.scss';
 export default function ThemeList() {
   return (
     <div className="theme-list">
+      <div
+        className="theme-list__banner"
+        style={{
+          background: `url(${BANNER_4}) center no-repeat`,
+          backgroundSize: 'cover',
+        }}
+      ></div>
       <div className="container">
         <div className="theme-list__heading">
           <span className="flex items-center heading">
