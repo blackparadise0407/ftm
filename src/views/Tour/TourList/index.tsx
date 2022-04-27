@@ -11,7 +11,7 @@ export default function TourList() {
 
   useEffect(() => {
     if (!query.tab) {
-      setQuery({ tab: 'guided' });
+      setQuery({ tab: 'landscape' });
     }
   }, []);
 
