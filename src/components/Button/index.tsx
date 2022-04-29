@@ -1,5 +1,5 @@
-import clsx from 'clsx';
 import { HTMLProps, memo, ReactNode } from 'react';
+import clsx from 'clsx';
 
 import './styles.scss';
 

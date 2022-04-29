@@ -1,6 +1,7 @@
+import { memo } from 'react';
+
 import ProfileInfo from 'components/ProfileInfo';
 import TourCard from 'components/TourCard';
-import { memo } from 'react';
 
 import './styles.scss';
 
