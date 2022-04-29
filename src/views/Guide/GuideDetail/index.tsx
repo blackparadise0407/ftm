@@ -1,5 +1,5 @@
 import { BANNER_3 } from 'assets/images';
-import { BELL, BI_HEART, CALENDAR, HEART, PIN, SHARE, USER } from 'assets/svgs';
+import { CALENDAR, HEART, PIN, USER } from 'assets/svgs';
 import { Button, ProfileInfo, TourCard } from 'components';
 
 import './styles.scss';
