@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import Button from 'components/Button';
 
@@ -18,8 +18,15 @@ export default memo(function ReviewTourCard({
   type = 'review',
   editable,
 }: ReviewTourCardProps) {
+  const navigate = useNavigate();
+
   return (
-    <div className="review-tour-card flex overflow-hidden">
+    <div
+      className="review-tour-card flex overflow-hidden"
+      onClick={() => {
+        navigate('/tours/tour');
+      }}
+    >
       <div className="review-tour-card__image relative">
         <img src={CARD_IMAGE_2} alt="" />
       </div>

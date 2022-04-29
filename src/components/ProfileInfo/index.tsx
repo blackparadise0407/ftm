@@ -39,21 +39,25 @@ export default function ProfileInfo({
           Patrick Twomey
         </span>
         <div className="item-wrapper text-sm">
-          <div className="item">
-            <img src={PIN} alt="" />
-            <span>Canada</span>
+          <div className="col">
+            <div className="item">
+              <img src={PIN} alt="" />
+              <span>Canada</span>
+            </div>
+            <div className="item">
+              <img width="12.44px" src={CALENDAR} alt="" />
+              <span>Joined Feb 2022</span>
+            </div>
           </div>
-          <div className="item">
-            <img src={USER} alt="" />
-            <span>197 Followers</span>
-          </div>
-          <div className="item">
-            <img width="12.44px" src={CALENDAR} alt="" />
-            <span>Joined Feb 2022</span>
-          </div>
-          <div className="item">
-            <img src={HEART} alt="" />
-            <span>1920</span>
+          <div className="col">
+            <div className="item">
+              <img src={USER} alt="" />
+              <span>197 Followers</span>
+            </div>
+            <div className="item">
+              <img src={HEART} alt="" />
+              <span>1920</span>
+            </div>
           </div>
         </div>
         <CustomLink title="See Profile" small to={`/guides/${data.id}`} />

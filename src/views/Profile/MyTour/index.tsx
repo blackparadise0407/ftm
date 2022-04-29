@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import {
   EyeOutlined,
   FileAddOutlined,
@@ -9,6 +11,8 @@ import { CustomLink, ReviewTourCard } from 'components';
 import './styles.scss';
 
 export default function MyTour() {
+  const [isViewAll, setIsViewAll] = useState(false);
+
   return (
     <div className="my-tour">
       <div className="my-tour__action-list">
@@ -41,10 +45,23 @@ export default function MyTour() {
       <div className="my-tour__tour-list flex flex-col">
         <ReviewTourCard editable />
         <ReviewTourCard editable />
+        {isViewAll && (
+          <>
+            <ReviewTourCard editable />
+            <ReviewTourCard editable />
+            <ReviewTourCard editable />
+            <ReviewTourCard editable />
+          </>
+        )}
       </div>
       <div className="flex view-all">
         <div className="flex-grow"></div>
-        <CustomLink to="/" title="View All" small />
+        <CustomLink
+          to=""
+          title="View All"
+          small
+          onClick={() => setIsViewAll(true)}
+        />
       </div>
     </div>
   );

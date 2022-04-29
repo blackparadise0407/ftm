@@ -7,7 +7,6 @@
         margin-top: 30px;
 
         #chartdiv {
-            max-width: 1670px;
             height: 812px;
             margin: 0 auto;
             background: rgba(60, 99, 180, 0.5);
@@ -17,12 +16,18 @@
             border-radius: 50px;
             margin-bottom: 38px;
             overflow: hidden;
+
+            @media screen and (min-width: 1200px) {
+                max-width: 1450px;
+            }
+
+            @media screen and (min-width: 1440px) {
+                max-width: 1670px;
+            }
         }
     }
 
     .feature {
-        margin: 0 auto;
-        max-width: 1410px;
 
         .h3 {
             margin-top: 38px;

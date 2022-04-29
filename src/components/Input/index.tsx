@@ -1,17 +1,39 @@
-import { HTMLProps, memo, ReactNode } from 'react';
+import {
+  ForwardedRef,
+  forwardRef,
+  HTMLProps,
+  memo,
+  MouseEvent,
+  ReactNode,
+} from 'react';
 
 import './styles.scss';
 
 interface InputProps extends HTMLProps<HTMLDivElement> {
   inputProps?: HTMLProps<HTMLInputElement>;
   icon?: ReactNode;
+  iconOnClick?: (e?: MouseEvent<HTMLSpanElement>, inputValue?: string) => void;
 }
 
-export default memo(function Input({ inputProps, icon, ...rest }: InputProps) {
-  return (
-    <div className="input relative" {...rest}>
-      <input {...inputProps} />
-      {icon && <span className="input__icon absolute">{icon}</span>}
-    </div>
-  );
-});
+export default memo(
+  forwardRef(function Input(
+    { inputProps, icon, value, iconOnClick = () => {}, ...rest }: InputProps,
+    ref: ForwardedRef<HTMLInputElement>
+  ) {
+    return (
+      <div className="input relative" {...rest}>
+        <input ref={ref} value={value} {...inputProps} />
+        {icon && (
+          <span
+            className="input__icon absolute"
+            onClick={(e) => {
+              iconOnClick(e, value as string);
+            }}
+          >
+            {icon}
+          </span>
+        )}
+      </div>
+    );
+  })
+);

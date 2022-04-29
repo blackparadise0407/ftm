@@ -35,15 +35,15 @@ const mockData = [
 const settings: Settings = {
   dots: false,
   infinite: true,
-  speed: 500,
   slidesToShow: 8,
   slidesToScroll: 1,
   arrows: false,
   autoplay: true,
-  autoplaySpeed: 5000,
-  draggable: true,
   pauseOnHover: true,
   rtl: true,
+  speed: 2000,
+  autoplaySpeed: 2000,
+  cssEase: 'linear',
 };
 
 am4core.useTheme(am4themes.default);
@@ -95,26 +95,28 @@ export default function Landing() {
       </section>
       {/* Featured tour section */}
       <section className="feature text-white">
-        <h3 className="h3 text-secondary">Featured Tour</h3>
-        <div
-          className="image-container"
-          style={{
-            background: `url(${BANNER}) center no-repeat`,
-            backgroundSize: 'cover',
-          }}
-        >
-          <div className="container">
-            <h2 className="h2 title">Lorem Ipsum</h2>
-            <p className="text-lg description">
-              Lorem Ipsum is simply dummy text of the and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the 1500s
-            </p>
-            <Button className="img-button">More fun</Button>
-            <div className="flex tour-card-groups">
-              <TourCard transparent />
-              <div className="flex-grow"></div>
-              <TourCard transparent />
+        <div className="container">
+          <h3 className="h3 text-secondary">Featured Tour</h3>
+          <div
+            className="image-container"
+            style={{
+              background: `url(${BANNER}) center no-repeat`,
+              backgroundSize: 'cover',
+            }}
+          >
+            <div className="container">
+              <h2 className="h2 title">Lorem Ipsum</h2>
+              <p className="text-lg description">
+                Lorem Ipsum is simply dummy text of the and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s
+              </p>
+              <Button className="img-button">More fun</Button>
+              <div className="flex tour-card-groups">
+                <TourCard transparent />
+                <div className="flex-grow"></div>
+                <TourCard transparent />
+              </div>
             </div>
           </div>
         </div>

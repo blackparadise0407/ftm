@@ -1,8 +1,10 @@
-import { CALENDAR, SEARCH } from 'assets/svgs';
-import Checkbox from 'components/Checkbox';
-import Input from 'components/Input';
 import { memo, useState } from 'react';
-import { Range } from 'react-range';
+import { getTrackBackground, Range } from 'react-range';
+
+import { SEARCH } from 'assets/svgs';
+import Checkbox from 'components/Checkbox';
+import DatePicker from 'components/DatePicker';
+import Input from 'components/Input';
 import { getFormatTimeFromMinute } from 'utils/string';
 
 import './styles.scss';
@@ -86,16 +88,34 @@ export default memo(function Filter() {
             )}
             renderTrack={({ props, children }) => (
               <div
-                {...props}
+                onMouseDown={props.onMouseDown}
+                onTouchStart={props.onTouchStart}
                 style={{
                   ...props.style,
                   height: '6px',
+                  display: 'flex',
                   width: '100%',
                   borderRadius: '4px',
                   backgroundColor: '#2E65BA',
                 }}
               >
-                {children}
+                <div
+                  ref={props.ref}
+                  style={{
+                    height: '5px',
+                    width: '100%',
+                    borderRadius: '4px',
+                    background: getTrackBackground({
+                      values: range,
+                      colors: ['#cccccc', '#2E65BA', '#cccccc'],
+                      min: MIN,
+                      max: MAX,
+                    }),
+                    alignSelf: 'center',
+                  }}
+                >
+                  {children}
+                </div>
               </div>
             )}
           />
@@ -103,7 +123,7 @@ export default memo(function Filter() {
       </div>
       <div className="filter__section">
         <h5 className="h5 title">Date Range</h5>
-        <Input icon={<img src={CALENDAR} alt="icon" />} />
+        <DatePicker />
       </div>
       <div className="filter__section">
         <h5 className="h5 title">Categories</h5>

@@ -1,5 +1,4 @@
-import { useEffect, useRef } from 'react';
-
+import { useEffect, useRef, useState } from 'react';
 import * as am4geodata from '@amcharts/amcharts4-geodata/worldLow';
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4maps from '@amcharts/amcharts4/maps';
@@ -13,7 +12,10 @@ import './styles.scss';
 am4core.useTheme(am4themes.default);
 
 export default function Overview() {
+  const [isViewAll, setIsViewAll] = useState(false);
+
   const chart = useRef<any>(null);
+
   useEffect(() => {
     let map = am4core.create('chartdiv', am4maps.MapChart);
 
@@ -66,14 +68,29 @@ export default function Overview() {
           <span className="h4">0 reviews</span>
         </div>
       </div>
-      <div id="chartdiv"></div>
+      {!isViewAll && <div id="chartdiv"></div>}
       <div className="forget-review flex justify-between items-center">
         <h5 className="h5">Don't Forget To Review</h5>
-        <CustomLink to="#" small title="View All" />
+        <CustomLink
+          to=""
+          small
+          title="View All"
+          onClick={() => setIsViewAll(true)}
+        />
       </div>
       <div className="tour-card-list flex flex-col">
         <ReviewTourCard />
         <ReviewTourCard />
+        {isViewAll && (
+          <>
+            <ReviewTourCard />
+            <ReviewTourCard />
+            <ReviewTourCard />
+            <ReviewTourCard />
+            <ReviewTourCard />
+            <ReviewTourCard />
+          </>
+        )}
       </div>
     </div>
   );
