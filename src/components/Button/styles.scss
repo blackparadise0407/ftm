@@ -41,12 +41,21 @@
     font-size: $fs-base;
     padding: 17px 36px;
     text-transform: uppercase;
+
+    @media screen and (max-width: 480px) {
+      font-size: $fs-sm;
+      padding: 12px 30px;
+    }
   }
 
   &--small {
     font-size: $fs-sm;
     padding: 10px 19px;
     text-transform: capitalize;
+
+    @media screen and (max-width: 480px) {
+      padding: 4.71px 7.57px;
+    }
   }
 
   &--outlined {

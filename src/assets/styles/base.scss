@@ -59,6 +59,10 @@ a {
   flex-grow: 1;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-center {
   align-items: center;
 }
@@ -120,7 +124,6 @@ a {
 
   @media screen and (max-width: 480px) {
     max-width: 388px;
-
   }
 }
 

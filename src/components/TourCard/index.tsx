@@ -40,7 +40,7 @@ export default memo(function TourCard({
       </div>
       <div className="footer">
         <div className="flex items-center head-line">
-          <img className="bg-primary" src={BADGE} alt="" />
+          <img className="bg-primary self-start" src={BADGE} alt="" />
           <h6 className={clsx('h6', compact && 'truncate')}>
             Lorem Ipsum is simply dummy text of the print ing
           </h6>
@@ -58,9 +58,11 @@ export default memo(function TourCard({
           </div>
         )}
       </div>
-      <div className="time">
-        <h4 className="h4 text-primary">09:30 PM</h4>
-      </div>
+      {compact && (
+        <div className="time">
+          <h4 className="h4 text-primary">09:30 PM</h4>
+        </div>
+      )}
     </div>
   );
 });

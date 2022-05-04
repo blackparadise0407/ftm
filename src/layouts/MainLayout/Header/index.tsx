@@ -117,7 +117,7 @@ export default function Header() {
           ))}
         </ul>
         {isAuth ? _renderUser(onSignOut) : _renderGuest(onLogin)}
-        <div className="relative">
+        <div className="relative flex items-center justify-center">
           <img
             className="menu"
             onClick={() => setMenuOpen((prev) => !prev)}

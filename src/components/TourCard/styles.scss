@@ -9,6 +9,10 @@
     border: 1px solid transparent;
     transition: box-shadow ease 0.2s;
 
+    @media screen and (max-width: 480px) {
+        height: auto;
+    }
+
     &:hover {
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
         -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
@@ -20,10 +24,19 @@
         padding: 35px 30px 20px;
         gap: 10px;
 
+        @media screen and (max-width: 480px) {
+            padding: 25px 24px 14px;
+        }
+
         img {
             width: 50px;
             height: 50px;
             border-radius: 50%;
+
+            @media screen and (max-width: 480px) {
+                width: 40px;
+                height: 40px;
+            }
         }
 
         div {
@@ -34,11 +47,22 @@
     .body {
         height: 200px;
         overflow: hidden;
+
+        @media screen and (max-width: 480px) {
+            height: 147px;
+        }
+
     }
 
     .footer {
         height: 148px;
         padding: 20px 30px 35px;
+
+        @media screen and (max-width: 480px) {
+            height: auto;
+            padding: 13px 25px;
+        }
+
 
         .head-line {
             gap: 8px;

@@ -112,7 +112,7 @@ export default function Landing() {
                 text ever since the 1500s
               </p>
               <Button className="img-button">More fun</Button>
-              <div className="flex tour-card-groups">
+              <div className="flex flex-wrap tour-card-groups">
                 <TourCard transparent />
                 <div className="flex-grow"></div>
                 <TourCard transparent />
