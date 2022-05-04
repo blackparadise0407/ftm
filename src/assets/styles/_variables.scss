@@ -1,4 +1,5 @@
-$font: "Montserrat", sans-serif;
+$font: "Montserrat",
+sans-serif;
 
 // Font size
 $fs-sm: 14px;
@@ -15,11 +16,9 @@ $jordy-blue: #8fc4f6;
 $vivid-tangelo: #f27232;
 $white: #fafbfd;
 
-$linear-blue: linear-gradient(
-  117.01deg,
+$linear-blue: linear-gradient(117.01deg,
   $cerulean-blue 9%,
-  $jordy-blue 103.58%
-);
+  $jordy-blue 103.58%);
 $linear-tangelo: linear-gradient(117.01deg, $vivid-tangelo 9%, #fafbfd 103.58%);
 $chinese-silver: #cdcdcd;
 $dark-charcoal: #333333;
@@ -32,3 +31,4 @@ $gray-5: #333333;
 
 // Utils
 $spacing-h-lg: 255px;
+$spacing-h-sm: 20px;

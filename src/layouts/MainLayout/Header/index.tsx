@@ -1,9 +1,8 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import clsx from 'clsx';
 import { Link, NavLink } from 'react-router-dom';
 
-import { LOGO_BLUE } from 'assets/images';
-import { CHEV_DOWN } from 'assets/svgs';
+import { CHEV_DOWN, MENU } from 'assets/svgs';
 import { Button } from 'components';
 import { useAuthContext } from 'contexts';
 import { useEventListener } from 'hooks';
@@ -28,7 +27,12 @@ const links = [
 
 const _renderGuest = (onLogin: () => void) => {
   return (
-    <Button type="primary" variant="filled" onClick={onLogin}>
+    <Button
+      className="login-btn"
+      type="primary"
+      variant="filled"
+      onClick={onLogin}
+    >
       Log in
     </Button>
   );
@@ -63,6 +67,10 @@ export default function Header() {
   const { isAuth, onLogin, onSignOut } = useAuthContext();
   const [lastScrollY, setLastScrollY] = useState(0);
   const [show, setShow] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  // useOnClickOutside
 
   const handleNavigation = useCallback(
     (e: any) => {
@@ -84,18 +92,16 @@ export default function Header() {
   useEventListener('scroll', handleNavigation);
 
   return (
-    <header
+    <nav
       className={clsx(
-        'header fixed flex text-white flex items-center',
-        !show && 'header--hidden'
+        'fixed header text-white flex items-center',
+        show ? 'flex' : 'hidden'
       )}
     >
       <div className="container w-full flex items-center justify-between">
-        <div className="logo">
-          <Link to="/">
-            <img src={LOGO_BLUE} alt="logo" />
-          </Link>
-        </div>
+        <Link to="/">
+          <div className="logo"></div>
+        </Link>
         <ul className="flex uppercase">
           {links.map(({ to, title }, idx) => (
             <li key={idx} className="h4">
@@ -111,7 +117,36 @@ export default function Header() {
           ))}
         </ul>
         {isAuth ? _renderUser(onSignOut) : _renderGuest(onLogin)}
+        <div className="relative">
+          <img
+            className="menu"
+            onClick={() => setMenuOpen((prev) => !prev)}
+            src={MENU}
+            alt=""
+          />
+          {menuOpen && (
+            <div ref={menuRef} className="menu-popup absolute uppercase">
+              {links.map(({ to, title }, idx) => (
+                <li key={idx} className="h6">
+                  <NavLink
+                    className={({ isActive }) =>
+                      clsx('link', isActive ? 'link--active' : '')
+                    }
+                    to={to}
+                  >
+                    {title}
+                  </NavLink>
+                </li>
+              ))}
+              <li className="h6" onClick={onLogin}>
+                <NavLink className="link" to="">
+                  Log in
+                </NavLink>
+              </li>
+            </div>
+          )}
+        </div>
       </div>
-    </header>
+    </nav>
   );
 }

@@ -31,6 +31,7 @@ import LANDSCAPE_SECONDARY from './landscape-secondary.svg';
 import LANDSCAPE_DISABLED from './landscape-disabled.svg';
 import COMMENT from './comment.svg';
 import CROWD from './crowd.svg';
+import MENU from './menu.svg';
 
 export { default as Clock } from './Clock';
 export { default as StarOutlined } from './StarOutlined';
@@ -74,4 +75,5 @@ export {
   GUIDED_BLUE_40,
   SIGHTSEEING_BLUE_40,
   LANDSCAPE_DISABLED,
+  MENU,
 };

@@ -1,6 +1,6 @@
 @import "assets/styles/variables";
 
-header.header {
+nav.header {
     top: 0;
     left: 0;
     right: 0;
@@ -21,11 +21,23 @@ header.header {
         -moz-box-shadow: none;
     }
 
-    .logo {
+    @media screen and (max-width: 480px) {
+        padding: 0 $spacing-h-sm;
+        background: $linear-blue;
+    }
 
-        img {
-            width: 248px;
-            height: 62px;
+    .logo {
+        width: 248px;
+        height: 62px;
+        background: url('../../../assets/images/logo-blue.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media only screen and (max-width: 480px) {
+            width: 124px;
+            height: 30px;
+            background: url('../../../assets/images/logo-small.png');
         }
     }
 
@@ -46,6 +58,10 @@ header.header {
 
                 }
             }
+        }
+
+        @media screen and (max-width: 480px) {
+            display: none;
         }
     }
 
@@ -121,5 +137,50 @@ header.header {
                 display: block;
             }
         }
+
+        @media screen and (max-width: 480px) {
+            display: none;
+        }
+    }
+
+    .login-btn {
+
+        @media screen and (max-width: 480px) {
+            display: none;
+        }
+    }
+
+    .menu {
+        cursor: pointer;
+    }
+
+    .menu-popup {
+        max-width: 166px;
+        right: 0;
+        top: 100%;
+        list-style: none;
+        padding: 0 10px;
+        border-radius: 10px;
+        background-color: $white;
+
+
+        li {
+            padding: 10px 0;
+
+
+            a {
+                color: $dark-charcoal;
+
+                &:hover {
+                    color: $cerulean-blue;
+                }
+            }
+
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $jordy-blue;
+            }
+        }
+
     }
 }
