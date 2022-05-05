@@ -43,6 +43,11 @@
 
         gap: 36px;
 
+        @media screen and (max-width: 480px) {
+            --size: 100px;
+            --ranking-size: 24px;
+        }
+
         .user-ranking__avatar-wrapper {
             .rank {
                 bottom: 0;
@@ -112,18 +117,28 @@
                 width: 70px;
                 top: calc(50% - var(--line-space-v));
 
+                @media screen and (max-width: 480px) {
+                    width: 54.44px;
+                }
             }
 
             .line-2 {
                 width: 52.5px;
                 top: 50%;
 
+                @media screen and (max-width: 480px) {
+                    width: 40.83px;
+                }
             }
 
 
             .line-3 {
                 width: 35px;
                 top: calc(50% + var(--line-space-v));
+
+                @media screen and (max-width: 480px) {
+                    width: 27.22px;
+                }
             }
 
             .crowd {
@@ -131,6 +146,10 @@
                 top: 0;
                 left: 50%;
                 transform: translate(-50%, calc(-100% - 10px));
+
+                @media screen and (max-width: 480px) {
+                    width: 24px;
+                }
             }
         }
     }

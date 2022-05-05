@@ -167,7 +167,7 @@ export default function GuideDetail() {
               </div>
             </div>
           </div>
-          <div className="side">
+          <div className="side flex-1">
             <h5 className="h5 capitalize">People also viewed</h5>
             <div className="also-view flex flex-col">
               <ProfileInfo size="small" isCard />

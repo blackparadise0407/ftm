@@ -5,7 +5,7 @@ export default function GuideList() {
   return (
     <div className="guide-list">
       <div className="about">
-        <div className="container flex">
+        <div className="container flex about__wrapper justify-between">
           <div className="about__heading">
             <div className="flex flex-col heading">
               <span className="text-gray-4">GET TO KNOW</span>

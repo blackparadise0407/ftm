@@ -25,24 +25,28 @@ export default memo(function Player({
 
   return (
     <div className="player relative">
-      <ReactPlayer
-        width="690px"
-        height="515px"
-        playing={playing}
-        url={url}
-        onClickPreview={() => {
-          loaded.current = true;
-        }}
-        light={thumb ?? false}
-        playIcon={
-          <img
-            className="player__play-btn"
-            src={PLAY}
-            alt=""
-            onClick={handlePlayPause}
-          />
-        }
-      />
+      <div className="player__wrapper relative">
+        <ReactPlayer
+          width="100%"
+          height="100%"
+          className="react-player"
+          playing={playing}
+          url={url}
+          onClickPreview={() => {
+            loaded.current = true;
+          }}
+          light={thumb ?? false}
+          playIcon={
+            <img
+              className="player__play-btn"
+              src={PLAY}
+              alt=""
+              onClick={handlePlayPause}
+            />
+          }
+        />
+      </div>
+
       {loaded.current && (
         <div className="player__overlay" onClick={handlePlayPause}>
           {!playing && <img className="player__play-btn" src={PLAY} alt="" />}

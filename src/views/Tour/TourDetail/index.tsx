@@ -15,7 +15,7 @@ export default function TourDetail() {
           backgroundSize: 'cover',
         }}
       ></div>
-      <div className="container flex main-wrapper">
+      <div className="container flex main-wrapper relative">
         <div className="tour-detail__main">
           <div className="about">
             <h5 className="h5 text-secondary capitalize title">

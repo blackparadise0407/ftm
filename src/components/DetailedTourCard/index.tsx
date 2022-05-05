@@ -20,11 +20,17 @@ export default memo(function DetailedTourCard({}: DetailedTourCardProps) {
         navigate(`/tours/tour`);
       }}
     >
-      <div className="detailed-tour-card__image relative">
+      <div
+        className="detailed-tour-card__image relative"
+        style={{
+          background: `url(${CARD_IMAGE_2}) center no-repeat`,
+          backgroundSize: 'cover',
+        }}
+      >
         <div className="hour">
           <h4 className="h4">09:30 PM</h4>
         </div>
-        <img src={CARD_IMAGE_2} alt="" />
+        {/* <img className="w-full" src={CARD_IMAGE_2} alt="" /> */}
         <div className="avatar">
           <img
             src="https://i.pravatar.cc/100"
@@ -36,9 +42,9 @@ export default memo(function DetailedTourCard({}: DetailedTourCardProps) {
           />
         </div>
       </div>
-      <div className="detailed-tour-card__info w-full flex items-start">
+      <div className="detailed-tour-card__info flex flex-1 items-start">
         <div className="info-group text-dark">
-          <h4 className="h4 text-dark">Discover Ohrid - UNESCO city</h4>
+          <h4 className="h4 text-dark">Discover Ohrid</h4>
           <p className="text-base">Apostolis Karajanis</p>
           <p className="text-base flex items-center">
             <img src={PIN} alt="" />

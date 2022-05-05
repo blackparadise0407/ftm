@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import ReactSlick, { Settings } from 'react-slick';
 import * as am4geodata from '@amcharts/amcharts4-geodata/worldLow';
 import * as am4core from '@amcharts/amcharts4/core';
@@ -17,6 +17,7 @@ import {
 import { Button, Player, TourCard, UserRanking } from 'components';
 
 import './styles.scss';
+import { useWindowSize } from 'hooks';
 
 const mockData = [
   { rank: 2, likes: 202, status: 'up' },
@@ -32,24 +33,28 @@ const mockData = [
   { rank: 51, likes: 2321, status: 'up' },
 ];
 
-const settings: Settings = {
-  dots: false,
-  infinite: true,
-  slidesToShow: 8,
-  slidesToScroll: 1,
-  arrows: false,
-  autoplay: true,
-  pauseOnHover: true,
-  rtl: true,
-  speed: 2000,
-  autoplaySpeed: 2000,
-  cssEase: 'linear',
-};
-
 am4core.useTheme(am4themes.default);
 
 export default function Landing() {
   const [tourType, setTourType] = useState<TourType>('guided');
+  const [w] = useWindowSize();
+
+  const settings = useMemo<Settings>(
+    () => ({
+      dots: false,
+      infinite: true,
+      slidesToShow: w > 480 ? 8 : 2,
+      slidesToScroll: 1,
+      arrows: false,
+      autoplay: true,
+      pauseOnHover: true,
+      rtl: true,
+      speed: 2000,
+      autoplaySpeed: 2000,
+      cssEase: 'linear',
+    }),
+    [w]
+  );
 
   const chart = useRef<any>(null);
   useEffect(() => {
@@ -203,7 +208,7 @@ export default function Landing() {
         </ReactSlick>
       </section>
       <section className="about">
-        <div className="container flex">
+        <div className="container about__wrapper flex">
           <div className="about__heading">
             <div className="flex flex-col heading">
               <span>
@@ -217,6 +222,7 @@ export default function Landing() {
             </div>
             <Button>ABOUT US</Button>
           </div>
+          <div className="flex-grow"></div>
           <div className="about__video relative flex flex-col justify-center">
             <Player />
           </div>

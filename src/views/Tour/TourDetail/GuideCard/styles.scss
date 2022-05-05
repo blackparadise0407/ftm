@@ -10,6 +10,11 @@
     backdrop-filter: blur(4px);
     padding: 30px;
 
+    @media screen and (max-width: 480px) {
+        width: 382px;
+        height: 278px;
+    }
+
     &__type {
         gap: 20px;
     }

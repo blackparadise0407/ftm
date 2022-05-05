@@ -4,9 +4,12 @@
 
     &__banner {
         height: 500px;
+
+        @media screen and (max-width: 480px) {
+            width: 428px;
+            height: 300px;
+        }
     }
-
-
 
     .main-wrapper {
         gap: 30px;
@@ -25,12 +28,31 @@
 
     &__side {
 
+        @media screen and (max-width: 480px) {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            .action-guide-card {
+                display: none;
+            }
+
+        }
+
         .wrapper {
             position: absolute;
             top: -350px;
             left: 0;
             gap: 30px;
+
+
+            @media screen and (max-width: 480px) {
+                top: -285px;
+
+            }
         }
+
+
     }
 
     .title {

@@ -49,7 +49,7 @@
         overflow: hidden;
 
         @media screen and (max-width: 480px) {
-            height: 147px;
+            display: none;
         }
 
     }
@@ -92,6 +92,16 @@
         background-color: rgba($color: $gray-3, $alpha: 0.2);
         backdrop-filter: blur(4px);
         border-color: #7a7162;
+
+        .body {
+            display: block;
+            height: 200px;
+            overflow: hidden;
+
+            @media screen and (max-width: 480px) {
+                height: 147px;
+            }
+        }
     }
 
     &--compact {

@@ -1,14 +1,32 @@
 @import "assets/styles/variables";
 
-footer {
+footer.footer {
   height: 650px;
   padding: 73px $spacing-h-lg 0;
   background-color: rgba($color: $vivid-tangelo, $alpha: 0.65);
+
+  @media screen and (max-width: 480px) {
+    padding: 28px $spacing-h-sm 0;
+    height: auto;
+  }
+
+  .foot-c {
+
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 27px;
+    }
+  }
 
   .left {
     .links {
       margin-top: 40px;
       gap: 100px;
+
+      @media screen and (max-width: 480px) {
+        flex-wrap: wrap;
+      }
 
       .section {
 
@@ -29,8 +47,9 @@ footer {
 
   .right {
     img {
-      width: 570px;
-      height: 384px;
+      max-width: 570px;
+      width: 100%;
+      aspect-ratio: 1.48;
     }
 
     button {

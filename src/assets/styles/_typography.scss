@@ -31,13 +31,23 @@
 .h4 {
   font-weight: $font-bold;
   font-size: 20px;
-  line-height: 30px
+  line-height: 30px;
+
+  @media screen and (max-width: 480px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .h5 {
   font-weight: $font-bold;
   font-size: 16px;
   line-height: 24px;
+
+  @media screen and (max-width: 480px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 .h6 {

@@ -19,7 +19,7 @@ export default function TourList() {
   return (
     <div className="container flex tour-list">
       <Filter />
-      <div>
+      <div className="flex-1">
         <TourListNavigation />
         <div className="tour-groups">
           <h4 className="h4 grouped-title">Wed, 16 Mar</h4>

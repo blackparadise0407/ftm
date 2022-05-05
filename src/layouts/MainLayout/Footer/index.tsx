@@ -86,9 +86,9 @@ const _renderLinkSection = (): JSX.Element => {
 
 export default function Footer() {
   return (
-    <footer className="text-white">
+    <footer className="footer text-white">
       <div className="flex flex-col h-full container">
-        <div className="flex w-full">
+        <div className="flex w-full foot-c">
           <div className="left">
             <h1 className="h1" style={{ fontWeight: 400 }}>
               fillthemap

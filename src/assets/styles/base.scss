@@ -47,6 +47,10 @@ a {
   display: flex;
 }
 
+.flex-1 {
+  flex: 1;
+}
+
 .flex-col {
   flex-direction: column;
 }

@@ -4,27 +4,53 @@
 .guide-list {
     .about {
         min-height: 723px;
-
         background-color: rgba($color: $jordy-blue, $alpha: 0.3);
+
+        @media screen and (max-width: 480px) {
+            height: auto;
+            min-height: auto;
+            padding-bottom: 53px;
+        }
+
+        &__wrapper {
+            @media screen and (max-width: 480px) {
+                flex-direction: column-reverse;
+            }
+        }
 
         &__heading {
 
             .heading {
-                width: 690px;
+                max-width: 690px;
                 height: 172px;
                 margin-bottom: 77px;
                 margin-top: 219px;
                 font-size: 68px;
                 font-weight: $font-bold;
                 line-height: 86px;
+
+                @media screen and (max-width: 480px) {
+                    margin-top: 28px;
+                    height: auto;
+                    margin-bottom: 18px;
+                    font-size: 32px;
+                    line-height: 42px;
+                }
             }
         }
 
         &__video {
-            width: 690px;
-            height: 515px;
+            width: clamp(388px, 50%, 690px);
             margin-top: 104px;
-            background-color: #F7F7F7;
+            background-color: $white;
+            border-radius: 10px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+            -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+            -moz-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+
+            @media screen and (max-width: 480px) {
+                margin-top: 28px;
+            }
         }
     }
 
@@ -35,5 +61,10 @@
         grid-template-columns: repeat(3, 1fr);
         place-items: center;
         gap: 30px;
+
+        @media screen and (max-width: 480px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
     }
 }

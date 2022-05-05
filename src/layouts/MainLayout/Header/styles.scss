@@ -150,37 +150,45 @@ nav.header {
         }
     }
 
-    .menu {
-        cursor: pointer;
-    }
+    .menu-wrapper {
+        display: none;
 
-    .menu-popup {
-        max-width: 166px;
-        right: 0;
-        top: 100%;
-        list-style: none;
-        padding: 0 10px;
-        border-radius: 10px;
-        background-color: $white;
-
-
-        li {
-            padding: 10px 0;
-
-
-            a {
-                color: $dark-charcoal;
-
-                &:hover {
-                    color: $cerulean-blue;
-                }
-            }
-
-
-            &:not(:last-child) {
-                border-bottom: 1px solid $jordy-blue;
-            }
+        @media screen and (max-width: 480px) {
+            display: block;
         }
 
+        .menu {
+            cursor: pointer;
+        }
+
+        .menu-popup {
+            max-width: 166px;
+            right: 0;
+            top: 100%;
+            list-style: none;
+            padding: 0 10px;
+            border-radius: 10px;
+            background-color: $white;
+
+
+            li {
+                padding: 10px 0;
+
+
+                a {
+                    color: $dark-charcoal;
+
+                    &:hover {
+                        color: $cerulean-blue;
+                    }
+                }
+
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $jordy-blue;
+                }
+            }
+        }
     }
+
 }

@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { CHEV_DOWN, MENU } from 'assets/svgs';
 import { Button } from 'components';
 import { useAuthContext } from 'contexts';
-import { useEventListener } from 'hooks';
+import { useEventListener, useOnClickOutside } from 'hooks';
 
 import './styles.scss';
 
@@ -69,10 +69,9 @@ export default function Header() {
   const [show, setShow] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  useOnClickOutside(menuRef, () => setMenuOpen(false));
 
-  // useOnClickOutside
-
-  const handleNavigation = useCallback(
+  const handleScroll = useCallback(
     (e: any) => {
       const window = e.currentTarget;
       if (typeof window !== 'undefined') {
@@ -89,7 +88,7 @@ export default function Header() {
     [lastScrollY]
   );
 
-  useEventListener('scroll', handleNavigation);
+  useEventListener('scroll', handleScroll);
 
   return (
     <nav
@@ -117,7 +116,7 @@ export default function Header() {
           ))}
         </ul>
         {isAuth ? _renderUser(onSignOut) : _renderGuest(onLogin)}
-        <div className="relative flex items-center justify-center">
+        <div className="relative menu-wrapper flex items-center justify-center">
           <img
             className="menu"
             onClick={() => setMenuOpen((prev) => !prev)}
@@ -132,6 +131,7 @@ export default function Header() {
                     className={({ isActive }) =>
                       clsx('link', isActive ? 'link--active' : '')
                     }
+                    onClick={() => setMenuOpen(false)}
                     to={to}
                   >
                     {title}
