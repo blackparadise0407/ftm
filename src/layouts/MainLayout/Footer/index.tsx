@@ -88,15 +88,15 @@ export default function Footer() {
   return (
     <footer className="footer text-white">
       <div className="flex flex-col h-full container">
-        <div className="flex w-full foot-c">
+        <div className="flex w-full container foot-c">
           <div className="left">
-            <h1 className="h1" style={{ fontWeight: 400 }}>
+            <h1 className="h1 foot-t" style={{ fontWeight: 400 }}>
               fillthemap
             </h1>
             {_renderLinkSection()}
           </div>
           <div className="flex-grow"></div>
-          <div className="right flex flex-col">
+          <div className="right flex flex-col items-center">
             <img src={FOOTER_IMG} alt="footer" />
             <Button size="small" type="secondary" variant="outlined">
               Sign Up

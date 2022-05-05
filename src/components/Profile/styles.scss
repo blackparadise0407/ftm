@@ -44,5 +44,13 @@
     .tour-card-group {
         margin-top: 30px;
         gap: 30px;
+
+        @media screen and (max-width: 480px) {
+            flex-direction: column;
+
+            .tour-card {
+                width: 224px;
+            }
+        }
     }
 }

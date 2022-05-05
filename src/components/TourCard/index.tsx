@@ -1,7 +1,7 @@
-import { HTMLProps, memo } from 'react';
+import { CSSProperties, HTMLProps, memo } from 'react';
 import clsx from 'clsx';
 
-import { AVATAR, BADGE, CARD_IMAGE } from 'assets/images';
+import { AVATAR, BADGE, CARD_IMAGE, CARD_IMAGE_2 } from 'assets/images';
 import { Clock } from 'assets/svgs';
 import { Button } from 'components';
 
@@ -22,15 +22,26 @@ export default memo(function TourCard({
     <div
       className={clsx(
         'tour-card relative overflow-hidden',
-        transparent ? 'tour-card--transparent text-white' : 'text-dark',
+        transparent
+          ? 'tour-card--transparent text-white'
+          : 'tour-card--default text-dark',
         compact && 'tour-card--compact'
       )}
     >
       {!compact && (
-        <div className="header flex">
-          <img src={AVATAR} alt="" />
-          <div className="flex flex-col">
-            <h5 className="h5">Apostolis Karajanis</h5>
+        <div
+          className="header flex relative"
+          style={
+            {
+              '--bg-img': `url(${CARD_IMAGE_2}) center no-repeat`,
+            } as CSSProperties
+          }
+        >
+          <div className="avatar-wrapper relative">
+            <img src={AVATAR} alt="" />
+          </div>
+          <div className="flex flex-col guide-info">
+            <h5 className="h5">Name</h5>
             <p className="text-base">Profile guide</p>
           </div>
         </div>
@@ -39,18 +50,29 @@ export default memo(function TourCard({
         <img src={CARD_IMAGE} alt="" />
       </div>
       <div className="footer">
-        <div className="flex items-center head-line">
-          <img className="bg-primary self-start" src={BADGE} alt="" />
+        <div className="flex items-center head-line relative">
+          <img
+            className="bg-primary self-start badge absolute"
+            src={BADGE}
+            alt=""
+          />
           <h6 className={clsx('h6', compact && 'truncate')}>
             Lorem Ipsum is simply dummy text of the print ing
           </h6>
         </div>
         {!compact && (
           <div className="flex items-center action">
-            <span className="flex items-center">
-              <Clock className={transparent ? '#FAFBFD' : '#333333'} />
-              <span className="text-sm">08:30 AM</span>
-            </span>
+            <div className="flex flex-col extra-info">
+              <span className="flex items-center guide">
+                <span>
+                  <b className="font-bold">Name</b> - Profile guide
+                </span>
+              </span>
+              <span className="flex items-center">
+                <Clock fill={transparent ? '#FAFBFD' : '#333333'} />
+                <span>08:30 AM</span>
+              </span>
+            </div>
             <div className="flex-grow"></div>
             <Button size="small" onClick={onBookTour}>
               Book Tour

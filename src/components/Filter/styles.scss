@@ -1,11 +1,14 @@
 @import 'assets/styles/variables';
 
 .filter {
-    max-width: 450px;
-    width: 100%;
+    width: clamp(301px, 100%, 450px);
     height: fit-content;
     background-color: rgba($color: $jordy-blue, $alpha: 0.3);
     border-radius: 20px;
+
+    @media screen and (max-width: 768px) {
+        align-self: center;
+    }
 
     &__title {
         padding: 35px 0 35px 30px;

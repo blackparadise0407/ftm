@@ -39,11 +39,21 @@ export default function Landing() {
   const [tourType, setTourType] = useState<TourType>('guided');
   const [w] = useWindowSize();
 
-  const settings = useMemo<Settings>(
-    () => ({
+  const settings = useMemo<Settings>(() => {
+    let slidesToShow = 1;
+
+    if (w <= 480) {
+      slidesToShow = 2;
+    } else if (w > 480 && w <= 768) {
+      slidesToShow = 3;
+    } else if (w > 768 && w <= 1024) {
+      slidesToShow = 6;
+    } else if (w > 1024) slidesToShow = 8;
+
+    return {
       dots: false,
       infinite: true,
-      slidesToShow: w > 480 ? 8 : 2,
+      slidesToShow,
       slidesToScroll: 1,
       arrows: false,
       autoplay: true,
@@ -52,9 +62,8 @@ export default function Landing() {
       speed: 2000,
       autoplaySpeed: 2000,
       cssEase: 'linear',
-    }),
-    [w]
-  );
+    };
+  }, [w]);
 
   const chart = useRef<any>(null);
   useEffect(() => {

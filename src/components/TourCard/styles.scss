@@ -1,4 +1,5 @@
 @import 'assets/styles/variables';
+@import 'assets/styles/mixins';
 
 .tour-card {
     max-width: 451px;
@@ -9,9 +10,6 @@
     border: 1px solid transparent;
     transition: box-shadow ease 0.2s;
 
-    @media screen and (max-width: 480px) {
-        height: auto;
-    }
 
     &:hover {
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
@@ -24,7 +22,7 @@
         padding: 35px 30px 20px;
         gap: 10px;
 
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 768px) {
             padding: 25px 24px 14px;
         }
 
@@ -33,7 +31,7 @@
             height: 50px;
             border-radius: 50%;
 
-            @media screen and (max-width: 480px) {
+            @media screen and (max-width: 768px) {
                 width: 40px;
                 height: 40px;
             }
@@ -48,7 +46,7 @@
         height: 200px;
         overflow: hidden;
 
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 768px) {
             display: none;
         }
 
@@ -58,7 +56,7 @@
         height: 148px;
         padding: 20px 30px 35px;
 
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 768px) {
             height: auto;
             padding: 13px 25px;
         }
@@ -74,6 +72,11 @@
             }
         }
 
+        .badge {
+            top: 0;
+            right: calc(100% + 5px);
+        }
+
         .action {
             margin-top: 10px;
 
@@ -86,20 +89,194 @@
                 width: 11px;
             }
         }
+
+
+    }
+
+    &__side-image {
+        width: 102px;
+        overflow: hidden;
     }
 
     &--transparent {
+        display: block;
         background-color: rgba($color: $gray-3, $alpha: 0.2);
         backdrop-filter: blur(4px);
         border-color: #7a7162;
+
+        @media screen and (max-width: 1024px) {
+            max-width: 332px;
+        }
+
+        @media screen and (max-width: 768px) {
+            height: auto;
+        }
+
 
         .body {
             display: block;
             height: 200px;
             overflow: hidden;
 
-            @media screen and (max-width: 480px) {
+            @media screen and (max-width: 768px) {
                 height: 147px;
+            }
+        }
+
+        .footer {
+
+            @media screen and (max-width: 768px) {
+                padding: 13px 24px 28px 45px;
+            }
+
+            button {
+                padding: 10px 19px;
+                align-self: flex-start;
+
+                @media screen and (max-width: 768px) {
+                    padding: 4px 7px;
+                }
+
+            }
+
+            .guide {
+                display: none;
+            }
+
+            .extra-info {
+                font-size: $fs-sm;
+            }
+        }
+    }
+
+    &--default {
+
+        @media screen and (max-width: 768px) {
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            height: 140px;
+            background-color: $white;
+            border: 1px solid $gray-2;
+        }
+
+        .header {
+            height: 100px;
+            padding: 35px 30px 20px;
+            gap: 10px;
+
+            @media screen and (max-width: 768px) {
+                padding: 25px 24px 14px;
+                background: var(--bg-img);
+                background-size: cover;
+                height: auto;
+                width: 102px;
+                gap: 0;
+            }
+
+            .avatar-wrapper {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: #fff;
+
+                @media screen and (max-width: 768px) {
+                    position: absolute;
+                    width: 25px;
+                    height: 25px;
+                    bottom: 12px;
+                    right: 12px;
+                }
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    @include absoluteCenter();
+
+                    @media screen and (max-width: 768px) {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+
+            div {
+                gap: 2px;
+            }
+
+            .guide-info {
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+        }
+
+
+        .footer {
+            height: 148px;
+            padding: 20px 30px 35px;
+
+            @media screen and (max-width: 768px) {
+                height: auto;
+                padding: 20px 20px 20px 38px;
+            }
+
+
+            .head-line {
+                gap: 8px;
+
+                img {
+                    width: 16.67px;
+                    height: 16.67px;
+                    border-radius: 50%;
+                }
+            }
+
+            .badge {
+                top: 0;
+                right: calc(100% + 5px);
+            }
+
+            .action {
+                margin-top: 10px;
+
+                span {
+                    gap: 6px;
+                }
+
+                img {
+                    height: 11px;
+                    width: 11px;
+                }
+            }
+
+            button {
+                padding: 10px 19px;
+                align-self: flex-start;
+            }
+
+            .guide {
+                display: none;
+
+                @media screen and (max-width: 768px) {
+                    display: block;
+                    margin-bottom: 5px;
+                }
+            }
+
+            .extra-info {
+                font-size: $fs-sm;
+
+                @media screen and (max-width: 1024px) {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+
+                @media screen and (max-width: 768px) {
+                    font-size: 10px;
+                    line-height: 18px;
+                }
             }
         }
     }
@@ -108,6 +285,12 @@
         height: 274px;
         width: 330px;
         background-color: $white;
+        border-color: $gray-2;
+        box-shadow: none;
+
+        .body {
+            display: block;
+        }
 
         .time {
             position: absolute;
@@ -117,8 +300,5 @@
             background-color: $white;
             border-bottom-right-radius: 20px;
         }
-
-        border-color: $gray-2;
-        box-shadow: none;
     }
 }

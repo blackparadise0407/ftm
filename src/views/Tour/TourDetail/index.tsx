@@ -63,6 +63,11 @@ export default function TourDetail() {
           </div>
         </div>
       </div>
+      <div className="container flex flex-col action-guide-card-groups">
+        <ActionGuideCard buttonText="Book tour" />
+        <ActionGuideCard buttonText="Book tour" />
+        <ActionGuideCard buttonText="Follow" body="New date announcement?" />
+      </div>
     </div>
   );
 }

@@ -11,16 +11,53 @@
     &__main {
         gap: 30px;
 
+        @media screen and (max-width: 1440px) {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+
         .main {
-            width: 930px;
-            margin-bottom: 129px;
+            max-width: 930px;
+            width: 100%;
+            margin: 0 auto 129px;
+
+            @media screen and (max-width: 1440px) {
+                margin-bottom: 0;
+                align-self: center;
+            }
+
+            @media screen and (max-width: 1024px) {
+                max-width: 964px;
+            }
+
+            @media screen and (max-width: 768px) {
+                max-width: 708px;
+            }
+
+            @media screen and (max-width: 480px) {
+                max-width: 388px;
+            }
 
             .info {
                 position: relative;
                 gap: 30px;
 
+                @media screen and (max-width: 1024px) {
+                    gap: 20px;
+
+                }
+
                 .wrapper {
                     width: 210px;
+
+                    @media screen and (max-width: 768px) {
+                        width: 150px;
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        width: 100px;
+                    }
 
                     .avatar-wrapper {
                         position: absolute;
@@ -31,11 +68,31 @@
                         top: 0;
                         transform: translateY(-50%);
 
+                        @media screen and (max-width: 1024px) {
+                            width: 150px;
+                            height: 150px;
+                        }
+
+                        @media screen and (max-width: 768px) {
+                            width: 100px;
+                            height: 100px;
+                        }
+
                         img {
                             width: 196.88px;
                             height: 196.88px;
                             border-radius: 50%;
                             @include absoluteCenter();
+
+                            @media screen and (max-width: 1024px) {
+                                width: 140px;
+                                height: 140px;
+                            }
+
+                            @media screen and (max-width: 768px) {
+                                width: 100px;
+                                height: 100px;
+                            }
                         }
                     }
                 }
@@ -43,6 +100,10 @@
 
                 .extra-info {
                     margin-top: 20px;
+
+                    @media screen and (max-width: 1024px) {
+                        margin-top: 5px;
+                    }
 
                     .name {
                         display: inline-block;
@@ -53,15 +114,44 @@
                         margin-top: 20px;
                         gap: 30px;
 
+                        @media screen and (max-width: 1024px) {
+                            display: grid;
+                            flex: 1;
+                            grid-template-columns: repeat(4, 1fr);
+                            gap: 5px;
+                            font-size: 16px;
+                            line-height: 20px;
+                            margin-top: 5px;
+                        }
+
+                        @media screen and (max-width: 768px) {
+                            grid-template-columns: repeat(2, 1fr);
+                            font-size: 14px;
+                        }
+
                         .item {
                             display: flex;
                             gap: 10px;
+
+                            span {
+                                @media screen and (max-width: 1024px) {
+                                    white-space: nowrap;
+                                }
+                            }
                         }
                     }
 
                     .action-list {
                         gap: 30px;
                         margin-top: 30px;
+
+                        @media screen and (max-width: 1024px) {
+                            position: absolute;
+                            display: flex;
+                            flex-direction: column;
+                            top: -280px;
+                            right: 0;
+                        }
                     }
                 }
             }
@@ -69,6 +159,11 @@
             .article {
                 margin-top: 40px;
                 margin-bottom: 60px;
+
+                @media screen and (max-width: 1024px) {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
 
                 .title {
                     word-break: break-word;
@@ -84,8 +179,12 @@
 
                 .tour-list {
                     margin-top: 40px;
-                    // flex-wrap: wrap;
                     gap: 30px;
+
+                    @media screen and (max-width: 1024px) {
+                        flex-direction: column;
+                        align-items: center;
+                    }
                 }
             }
 
@@ -95,9 +194,23 @@
         .side {
             margin-top: 58px;
 
+            @media screen and (max-width: 1440px) {
+                margin: 0 auto 54px;
+                align-self: center;
+            }
+
+            @media screen and (max-width: 1024px) {
+                margin-top: 0;
+            }
+
             .also-view {
-                margin-top: 20px;
+                margin: 20px auto 0;
                 gap: 20px;
+
+                @media screen and (max-width: 1440px) {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                }
             }
         }
     }

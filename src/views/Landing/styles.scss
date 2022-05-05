@@ -17,14 +17,18 @@
             margin-bottom: 38px;
             overflow: hidden;
 
-            @media screen and (min-width: 1200px) {
-                max-width: 1450px;
-            }
-
             @media screen and (min-width: 1440px) {
                 max-width: 1670px;
             }
 
+            @media screen and (max-width: 1200px) {
+                max-width: 1200px;
+            }
+
+
+            @media screen and (max-width: 768px) {
+                max-width: 768px;
+            }
 
             @media screen and (max-width: 480px) {
                 max-width: 428px;
@@ -49,7 +53,7 @@
             .container {
                 margin: 0 90px;
 
-                @media screen and (max-width: 480px) {
+                @media screen and (max-width: 768px) {
                     margin: 0 20px;
                 }
 
@@ -80,7 +84,9 @@
                     margin-top: 73px;
                     flex-wrap: wrap;
 
-                    @media screen and (max-width: 480px) {
+                    @media screen and (max-width: 1024px) {
+                        flex-direction: column;
+                        align-items: center;
                         margin-top: 30px;
                         gap: 20px;
                     }
@@ -117,8 +123,9 @@
             margin-top: 38px;
             gap: 30px;
 
-            @media screen and (max-width: 480px) {
+            @media screen and (max-width: 1024px) {
                 flex-direction: column;
+                align-items: center;
             }
         }
     }
@@ -157,6 +164,11 @@
     .about {
         height: 723px;
 
+        @media screen and (max-width: 1024px) {
+            height: auto;
+            padding-bottom: 90px;
+        }
+
         @media screen and (max-width: 480px) {
             height: auto;
             padding-bottom: 30px;
@@ -179,6 +191,12 @@
                 font-size: 68px;
                 font-weight: $font-bold;
                 line-height: 86px;
+
+                @media screen and (max-width: 1024px) {
+                    height: auto;
+                    margin-top: 120px;
+                    margin-bottom: 30px;
+                }
 
                 @media screen and (max-width: 480px) {
                     height: auto;

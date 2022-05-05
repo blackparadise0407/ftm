@@ -1,10 +1,10 @@
 @import 'assets/styles/variables';
 
 .tour-list-navigation {
-    max-width: 930px;
-    width: 100%;
+    width: min(100%, 930px);
     height: 77px;
     border-radius: 5px;
+
 
     &__item {
         position: relative;
