@@ -1,20 +1,34 @@
 @import 'assets/styles/variables';
 
 .my-tour {
-
     &__action-list {
         display: flex;
         margin-top: 35px;
         margin-bottom: 30px;
         gap: 100px;
+        overflow-x: auto;
 
         .action {
             display: flex;
             align-items: center;
             gap: 20px;
 
+            svg {
+                @media screen and (max-width: 768px) {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
             span {
                 text-transform: uppercase;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 16px;
+                    line-height: 24px;
+                    white-space: nowrap;
+                }
+
             }
         }
     }

@@ -1,126 +1,125 @@
-@import "variables";
+@import 'variables';
 
 .h1 {
-  font-weight: $font-bold;
-  line-height: 86px;
-  font-size: 68px;
+    font-weight: $font-bold;
+    line-height: 86px;
+    font-size: 68px;
 }
 
 .h2 {
-  font-weight: $font-bold;
-  font-size: 48px;
-  line-height: 60px;
+    font-weight: $font-bold;
+    font-size: 48px;
+    line-height: 60px;
 
-  @media screen and (max-width: 480px) {
-    font-size: 20px;
-    line-height: 30px;
-  }
+    @media screen and (max-width: 480px) {
+        font-size: 20px;
+        line-height: 30px;
+    }
 }
 
 .h3 {
-  font-weight: $font-bold;
-  font-size: 32px;
-  line-height: 38px;
+    font-weight: $font-bold;
+    font-size: 32px;
+    line-height: 38px;
 
-  @media screen and (max-width: 480px) {
-    font-size: 20px;
-    line-height: 30px;
-  }
+    @media screen and (max-width: 480px) {
+        font-size: 20px;
+        line-height: 30px;
+    }
 }
 
 .h4 {
-  font-weight: $font-bold;
-  font-size: 20px;
-  line-height: 30px;
+    font-weight: $font-bold;
+    font-size: 20px;
+    line-height: 30px;
 
-  @media screen and (max-width: 480px) {
-    font-size: 16px;
-    line-height: 24px;
-  }
+    @media screen and (max-width: 480px) {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
 .h5 {
-  font-weight: $font-bold;
-  font-size: 16px;
-  line-height: 24px;
+    font-weight: $font-bold;
+    font-size: 16px;
+    line-height: 24px;
 
-  @media screen and (max-width: 480px) {
-    font-size: 14px;
-    line-height: 20px;
-  }
+    @media screen and (max-width: 480px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 
 .h6 {
-  font-weight: $font-bold;
-  font-size: 14px;
-  line-height: 20px;
+    font-weight: $font-bold;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .text-sm {
-  font-size: $fs-sm;
-  line-height: 20px;
+    font-size: $fs-sm;
+    line-height: 20px;
 }
 
 .text-base {
-  font-size: $fs-base;
-  line-height: 24px;
+    font-size: $fs-base;
+    line-height: 24px;
 }
 
 .text-lg {
-  font-size: $fs-lg;
-  line-height: 28px;
+    font-size: $fs-lg;
+    line-height: 28px;
 
-  @media screen and (max-width: 480px) {
-    font-size: $fs-sm;
-    line-height: 18px;
-  }
+    @media screen and (max-width: 480px) {
+        font-size: $fs-sm;
+        line-height: 18px;
+    }
 }
 
 .uppercase {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .capitalize {
-  text-transform: capitalize;
+    text-transform: capitalize;
 }
 
 .text-light {
-  color: $chinese-silver;
+    color: $chinese-silver;
 }
 
 .text-dark {
-  color: $dark-charcoal;
+    color: $dark-charcoal;
 }
 
 .text-white {
-  color: $white;
+    color: $white;
 }
 
 .text-gray-1 {
-  color: $gray-1;
+    color: $gray-1;
 }
 
 .text-gray-2 {
-  color: $gray-2;
+    color: $gray-2;
 }
 
 .text-gray-3 {
-  color: $gray-3;
+    color: $gray-3;
 }
 
 .text-gray-4 {
-  color: $gray-4;
+    color: $gray-4;
 }
 
 .text-gray-5 {
-  color: $gray-5;
+    color: $gray-5;
 }
 
 .font-normal {
-  font-weight: $font-normal;
+    font-weight: $font-normal;
 }
 
-
 .font-bold {
-  font-weight: $font-bold;
+    font-weight: $font-bold;
 }

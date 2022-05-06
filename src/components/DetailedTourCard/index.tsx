@@ -11,62 +11,62 @@ interface DetailedTourCardProps {}
 
 // eslint-disable-next-line no-empty-pattern
 export default memo(function DetailedTourCard({}: DetailedTourCardProps) {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
-  return (
-    <div
-      className="detailed-tour-card flex overflow-hidden"
-      onClick={() => {
-        navigate(`/tours/tour`);
-      }}
-    >
-      <div
-        className="detailed-tour-card__image relative"
-        style={{
-          background: `url(${CARD_IMAGE_2}) center no-repeat`,
-          backgroundSize: 'cover',
-        }}
-      >
-        <div className="hour">
-          <h4 className="h4">09:30 PM</h4>
-        </div>
-        {/* <img className="w-full" src={CARD_IMAGE_2} alt="" /> */}
-        <div className="avatar">
-          <img
-            src="https://i.pravatar.cc/100"
-            alt=""
-            onClick={(e) => {
-              e.stopPropagation();
-              navigate(`/guides/patrick`);
+    return (
+        <div
+            className="detailed-tour-card flex overflow-hidden"
+            onClick={() => {
+                navigate(`/tours/tour`);
             }}
-          />
-        </div>
-      </div>
-      <div className="detailed-tour-card__info flex flex-1 items-start">
-        <div className="info-group text-dark">
-          <h4 className="h4 text-dark">Discover Ohrid</h4>
-          <p className="text-base">Apostolis Karajanis</p>
-          <p className="text-base flex items-center">
-            <img src={PIN} alt="" />
-            Ochrid, North Macedonia
-          </p>
-          <p className="text-base flex items-center">
-            <img src={STAR} alt="" />
-            5.0 (3)
-          </p>
-        </div>
-        <div className="flex-grow"></div>
-        <Button
-          className="uppercase relative"
-          type="secondary"
-          variant="outlined"
-          onClick={(e) => {
-            e.stopPropagation();
-          }}
         >
-          Book
-        </Button>
-      </div>
-    </div>
-  );
+            <div
+                className="detailed-tour-card__image relative"
+                style={{
+                    background: `url(${CARD_IMAGE_2}) center no-repeat`,
+                    backgroundSize: 'cover',
+                }}
+            >
+                <div className="hour">
+                    <h4 className="h4">09:30 PM</h4>
+                </div>
+                {/* <img className="w-full" src={CARD_IMAGE_2} alt="" /> */}
+                <div className="avatar">
+                    <img
+                        src="https://i.pravatar.cc/100"
+                        alt=""
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            navigate(`/guides/patrick`);
+                        }}
+                    />
+                </div>
+            </div>
+            <div className="detailed-tour-card__info flex flex-1 items-start">
+                <div className="info-group text-dark">
+                    <h4 className="h4 text-dark">Discover Ohrid</h4>
+                    <p className="text-base">Apostolis Karajanis</p>
+                    <p className="text-base flex items-center">
+                        <img src={PIN} alt="" />
+                        Ochrid, North Macedonia
+                    </p>
+                    <p className="text-base flex items-center">
+                        <img src={STAR} alt="" />
+                        5.0 (3)
+                    </p>
+                </div>
+                <div className="flex-grow"></div>
+                <Button
+                    className="uppercase relative"
+                    type="secondary"
+                    variant="outlined"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                    }}
+                >
+                    Book
+                </Button>
+            </div>
+        </div>
+    );
 });

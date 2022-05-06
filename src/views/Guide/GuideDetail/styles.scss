@@ -2,7 +2,6 @@
 @import 'assets/styles/mixins';
 
 .guide-detail {
-
     &__banner {
         height: 300px;
         width: 100%;
@@ -15,7 +14,6 @@
             flex-direction: column;
             gap: 30px;
         }
-
 
         .main {
             max-width: 930px;
@@ -45,7 +43,6 @@
 
                 @media screen and (max-width: 1024px) {
                     gap: 20px;
-
                 }
 
                 .wrapper {
@@ -97,7 +94,6 @@
                     }
                 }
 
-
                 .extra-info {
                     margin-top: 20px;
 
@@ -108,7 +104,6 @@
                     .name {
                         display: inline-block;
                     }
-
 
                     .item-list {
                         margin-top: 20px;
@@ -176,7 +171,6 @@
             }
 
             .related-tour {
-
                 .tour-list {
                     margin-top: 40px;
                     gap: 30px;
@@ -187,9 +181,7 @@
                     }
                 }
             }
-
         }
-
 
         .side {
             margin-top: 58px;

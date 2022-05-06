@@ -43,6 +43,11 @@
 
         gap: 36px;
 
+        @media screen and (max-width: 1024px) {
+            --size: 140px;
+            --ranking-size: 28px;
+        }
+
         @media screen and (max-width: 480px) {
             --size: 100px;
             --ranking-size: 24px;
@@ -90,7 +95,6 @@
         }
 
         .decoration {
-
             --line-space-v: 15px;
             --line-space-h: 10px;
 
@@ -130,7 +134,6 @@
                     width: 40.83px;
                 }
             }
-
 
             .line-3 {
                 width: 35px;

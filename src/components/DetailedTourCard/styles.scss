@@ -3,7 +3,7 @@
 
 .detailed-tour-card {
     max-width: 930px;
-    height: 150px;
+    min-height: 150px;
     width: 100%;
     border-radius: 20px;
     background-color: rgba($color: $white, $alpha: 0.2);
@@ -25,6 +25,10 @@
     &__image {
         width: 330px;
 
+        @media screen and (max-width: 1024px) {
+            width: 219px;
+        }
+
         @media screen and (max-width: 480px) {
             width: 102px;
         }
@@ -38,6 +42,11 @@
             white-space: nowrap;
 
             .h4 {
+                @media screen and (max-width: 1024px) {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+
                 @media screen and (max-width: 480px) {
                     font-size: 12px;
                     line-height: 18px;
@@ -87,19 +96,23 @@
         }
 
         .info-group {
-            & *+* {
+            & * + * {
                 margin-top: 5px;
             }
 
             p {
                 gap: 7px;
 
+                @media screen and (max-width: 1024px) {
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+
                 @media screen and (max-width: 480px) {
                     font-size: 10px;
                     line-height: 18px;
                 }
             }
-
         }
 
         button {

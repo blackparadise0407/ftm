@@ -10,7 +10,6 @@
     border: 1px solid transparent;
     transition: box-shadow ease 0.2s;
 
-
     &:hover {
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
         -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
@@ -45,11 +44,6 @@
     .body {
         height: 200px;
         overflow: hidden;
-
-        @media screen and (max-width: 768px) {
-            display: none;
-        }
-
     }
 
     .footer {
@@ -60,7 +54,6 @@
             height: auto;
             padding: 13px 25px;
         }
-
 
         .head-line {
             gap: 8px;
@@ -89,8 +82,6 @@
                 width: 11px;
             }
         }
-
-
     }
 
     &__side-image {
@@ -104,14 +95,13 @@
         backdrop-filter: blur(4px);
         border-color: #7a7162;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1200px) {
             max-width: 332px;
         }
 
         @media screen and (max-width: 768px) {
             height: auto;
         }
-
 
         .body {
             display: block;
@@ -124,7 +114,6 @@
         }
 
         .footer {
-
             @media screen and (max-width: 768px) {
                 padding: 13px 24px 28px 45px;
             }
@@ -136,7 +125,6 @@
                 @media screen and (max-width: 768px) {
                     padding: 4px 7px;
                 }
-
             }
 
             .guide {
@@ -150,7 +138,6 @@
     }
 
     &--default {
-
         @media screen and (max-width: 768px) {
             height: auto;
             display: flex;
@@ -212,6 +199,11 @@
             }
         }
 
+        .body {
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
 
         .footer {
             height: 148px;
@@ -221,7 +213,6 @@
                 height: auto;
                 padding: 20px 20px 20px 38px;
             }
-
 
             .head-line {
                 gap: 8px;
@@ -287,9 +278,24 @@
         background-color: $white;
         border-color: $gray-2;
         box-shadow: none;
+        flex-direction: column;
+
+        @media screen and (max-width: 1024px) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+            height: auto;
+        }
 
         .body {
             display: block;
+            height: 200px;
+            overflow: hidden;
+
+            @media screen and (max-width: 768px) {
+                height: 200px;
+            }
         }
 
         .time {

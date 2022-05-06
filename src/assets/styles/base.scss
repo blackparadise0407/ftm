@@ -1,206 +1,218 @@
-@import "variables";
-
+@import 'variables';
 
 a {
-  text-decoration: none;
-  color: $cerulean-blue;
+    text-decoration: none;
+    color: $cerulean-blue;
 }
 
 .relative {
-  position: relative;
+    position: relative;
 }
 
 .absolute {
-  position: absolute;
+    position: absolute;
 }
 
 .sticky {
-  position: sticky;
+    position: sticky;
 }
 
 .fixed {
-  position: fixed;
+    position: fixed;
 }
 
 .sticky {
-  position: sticky;
+    position: sticky;
 }
 
 .text-primary {
-  color: $cerulean-blue;
+    color: $cerulean-blue;
 }
 
 .text-secondary {
-  color: $vivid-tangelo;
+    color: $vivid-tangelo;
 }
 
 .bg-primary {
-  background-color: $cerulean-blue;
-
+    background-color: $cerulean-blue;
 }
 
 .bg-secondary {
-  background-color: $vivid-tangelo;
+    background-color: $vivid-tangelo;
 }
 
 .flex {
-  display: flex;
+    display: flex;
 }
 
 .flex-1 {
-  flex: 1;
+    flex: 1;
 }
 
 .flex-col {
-  flex-direction: column;
+    flex-direction: column;
 }
 
 .flex-row {
-  flex-direction: row;
+    flex-direction: row;
 }
 
 .flex-grow {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
 .flex-wrap {
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .items-center {
-  align-items: center;
+    align-items: center;
 }
 
 .items-start {
-  align-items: flex-start;
+    align-items: flex-start;
 }
 
 .items-end {
-  align-items: flex-end;
+    align-items: flex-end;
 }
 
 .justify-center {
-  justify-content: center;
+    justify-content: center;
 }
 
 .justify-between {
-  justify-content: space-between;
+    justify-content: space-between;
 }
 
 .justify-around {
-  justify-content: space-around;
+    justify-content: space-around;
 }
 
 .justify-evenly {
-  justify-content: space-evenly;
+    justify-content: space-evenly;
 }
 
 .w-full {
-  width: 100%;
+    width: 100%;
 }
 
 .w-screen {
-  width: 100vw;
+    width: 100vw;
 }
 
 .h-full {
-  height: 100%;
+    height: 100%;
 }
 
 .h-screen {
-  height: 100vh;
+    height: 100vh;
 }
 
 .container {
-  margin: 0 auto;
+    margin: 0 auto;
 
-  @media screen and (min-width: 1440px) {
-    max-width: 1440px;
-  }
+    @media screen and (min-width: 1440px) {
+        max-width: 1440px;
+    }
 
-  @media screen and (max-width: 1440px) {
-    max-width: 1380px;
-  }
+    @media screen and (max-width: 1440px) {
+        max-width: 1380px;
+    }
 
-  @media screen and (max-width: 1200px) {
-    max-width: 1140px;
-  }
+    @media screen and (max-width: 1200px) {
+        max-width: 1140px;
+    }
 
-  @media screen and (max-width: 1024px) {
-    max-width: 904px;
-  }
+    @media screen and (max-width: 1024px) {
+        max-width: 964px;
+    }
 
-  @media screen and (max-width: 768px) {
-    max-width: 708px;
-  }
+    @media screen and (max-width: 768px) {
+        max-width: 708px;
+    }
 
-  @media screen and (max-width: 480px) {
-    max-width: 388px;
-  }
+    @media screen and (max-width: 480px) {
+        max-width: 388px;
+    }
 
-  // @media screen and (min-width: 320px, ) {
-  //   max-width: 388px;
-  // }
+    // @media screen and (min-width: 320px, ) {
+    //   max-width: 388px;
+    // }
 }
 
 .text-center {
-  text-align: center;
+    text-align: center;
 }
 
 .text-left {
-  text-align: left;
+    text-align: left;
 }
 
 .text-right {
-  text-align: right;
+    text-align: right;
 }
 
 .block {
-  display: block;
+    display: block;
 }
 
 .inline-block {
-  display: inline-block;
+    display: inline-block;
 }
 
 .inline {
-  display: inline;
+    display: inline;
 }
 
 .grid {
-  display: grid;
+    display: grid;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 .truncate {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .self-center {
-  align-self: center;
+    align-self: center;
 }
 
 .self-baseline {
-  align-self: baseline;
+    align-self: baseline;
 }
 
 .self-start {
-  align-self: flex-start;
+    align-self: flex-start;
 }
 
 .self-end {
-  align-self: flex-end;
+    align-self: flex-end;
 }
 
 .self-stretch {
-  align-self: stretch;
+    align-self: stretch;
 }
 
 .overflow-hidden {
-  overflow: hidden;
+    overflow: hidden;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.scroll-hidden {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
 }

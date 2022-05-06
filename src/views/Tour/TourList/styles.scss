@@ -1,22 +1,27 @@
 @import 'assets/styles/variables';
 
 .tour-list {
-  margin-top: 90px;
-  gap: 30px;
+    margin-top: 90px;
+    gap: 30px;
 
-  .tour-groups {
-    margin-top: 43px;
+    .tour-groups {
+        margin-top: 43px;
 
-    .grouped-title {
-      margin-bottom: 20px;
+        .grouped-title {
+            margin-bottom: 20px;
+        }
+
+        .detailed-tour-card {
+            margin-bottom: 20px;
+        }
     }
 
-    .detailed-tour-card {
-      margin-bottom: 20px;
+    &__wrapper {
+        max-width: 930px;
+        width: 100%;
     }
-  }
 
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-  }
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
 }

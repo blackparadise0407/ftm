@@ -6,6 +6,11 @@
         min-height: 723px;
         background-color: rgba($color: $jordy-blue, $alpha: 0.3);
 
+        @media screen and (max-width: 1024px) {
+            padding-bottom: 75px;
+            min-height: auto;
+        }
+
         @media screen and (max-width: 480px) {
             height: auto;
             min-height: auto;
@@ -13,12 +18,16 @@
         }
 
         &__wrapper {
-            @media screen and (max-width: 480px) {
+            @media screen and (max-width: 768px) {
                 flex-direction: column-reverse;
+                align-items: center;
             }
         }
 
         &__heading {
+            @media screen and (max-width: 480px) {
+                align-self: flex-start;
+            }
 
             .heading {
                 max-width: 690px;
@@ -29,7 +38,14 @@
                 font-weight: $font-bold;
                 line-height: 86px;
 
-                @media screen and (max-width: 480px) {
+                @media screen and (max-width: 1024px) {
+                    font-size: 48px;
+                    line-height: 68px;
+                    height: auto;
+                    margin-bottom: 30px;
+                }
+
+                @media screen and (max-width: 768px) {
                     margin-top: 28px;
                     height: auto;
                     margin-bottom: 18px;
@@ -62,9 +78,11 @@
         place-items: center;
         gap: 30px;
 
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 1200px) {
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
         }
+
+
     }
 }

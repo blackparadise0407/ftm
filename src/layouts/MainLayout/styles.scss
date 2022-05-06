@@ -5,5 +5,9 @@
 
     main {
         padding-top: 91px;
+
+        @media screen and (max-width: 1024px) {
+            padding-top: 0;
+        }
     }
 }

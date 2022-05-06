@@ -11,6 +11,13 @@
     border: 1px solid #bcbcbe;
     transition: box-shadow ease 0.2s;
 
+    @media screen and (max-width: 480px) {
+        max-width: 388px;
+        height: auto;
+
+
+    }
+
     &:hover {
         cursor: pointer;
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
@@ -18,29 +25,57 @@
         -moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
     }
 
-
     &__image {
         width: 330px;
+
+        @media screen and (max-width: 1024px) {
+            width: 219px;
+        }
+
+        @media screen and (max-width: 480px) {
+            width: 102px;
+        }
+
     }
 
     &__info {
         padding: 21px 30px;
+
+        @media screen and (max-width: 480px) {
+            flex-direction: column;
+            padding: 18px;
+        }
 
 
         img.avatar {
             height: 50px;
             width: 50px;
             border-radius: 50%;
+
+            @media screen and (max-width: 480px) {
+                height: 30px;
+                width: 30px;
+            }
         }
 
         .info-group {
             gap: 11px;
             margin-bottom: 15px;
 
-            .location {
-                gap: 7px;
+            @media screen and (max-width: 480px) {
+                font-size: 10px;
+                line-height: 20px;
             }
 
+
+            .location {
+                gap: 7px;
+
+                @media screen and (max-width: 480px) {
+                    font-size: 10px;
+                    line-height: 18px;
+                }
+            }
         }
 
         p {
@@ -49,11 +84,20 @@
 
         button {
             margin-top: 25px;
+
+            @media screen and (max-width: 480px) {
+                padding: 10px 15px;
+            }
         }
     }
 
     .edit-icon {
         top: 5px;
         right: 30px;
+
+        @media screen and (max-width: 1024px) {
+            top: 20px;
+            right: 30px;
+        }
     }
 }

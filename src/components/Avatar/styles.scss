@@ -1,13 +1,18 @@
 @import 'assets/styles/variables';
 @import 'assets/styles/mixins';
 
-
 .avatar-com {
     --wrapper-size: 160px;
     --avatar-size: 144px;
     background-color: transparent;
     border-radius: 50%;
     border: 3px solid $cerulean-blue;
+
+    @media screen and (max-width: 1024px) {
+        --wrapper-size: 130px;
+        --avatar-size: 117px;
+    }
+
 
     @media screen and (max-width: 480px) {
         --wrapper-size: 100px;
@@ -16,7 +21,6 @@
 
     width: var(--wrapper-size);
     height: var(--wrapper-size);
-
 
     .img {
         @include absoluteCenter();
@@ -66,5 +70,4 @@
             top: -1px;
         }
     }
-
 }

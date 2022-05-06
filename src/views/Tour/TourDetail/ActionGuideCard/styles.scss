@@ -8,6 +8,10 @@
     border-radius: 100px;
     padding: 20px;
 
+    @media screen and (max-width: 1024px) {
+        padding: 8px 10px;
+    }
+
     &__info {
         gap: 10px;
 
@@ -15,6 +19,12 @@
             height: 50px;
             width: 50px;
             border-radius: 50%;
+        }
+    }
+
+    button {
+        @media screen and (max-width: 1024px) {
+            white-space: nowrap;
         }
     }
 }

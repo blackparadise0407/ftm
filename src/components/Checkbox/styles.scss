@@ -24,8 +24,7 @@
         }
     }
 
-    input:checked~&__box {
-
+    input:checked ~ &__box {
         .checkmark {
             display: block;
         }

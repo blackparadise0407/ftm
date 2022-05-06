@@ -32,6 +32,8 @@ import LANDSCAPE_DISABLED from './landscape-disabled.svg';
 import COMMENT from './comment.svg';
 import CROWD from './crowd.svg';
 import MENU from './menu.svg';
+import CHEV_LEFT from './chev-left.svg';
+import CHEV_UP from './chev-up.svg';
 
 export { default as Clock } from './Clock';
 export { default as StarOutlined } from './StarOutlined';
@@ -40,40 +42,43 @@ export { default as EyeOutlined } from './EyeOutlined';
 export { default as PinOutlined } from './PinOutlined';
 export { default as FileAddOutlined } from './FileAddOutlined';
 export { default as EditOutlined } from './EditOutlined';
+export { default as Menu } from './Menu';
 
 export {
-  CLOCK,
-  BI_HEART,
-  HEART,
-  CARET_UP,
-  CARET_DOWN,
-  CHEV_DOWN,
-  FACEBOOK,
-  YOUTUBE,
-  INSTAGRAM,
-  PINTEREST,
-  SEARCH,
-  CALENDAR,
-  PIN,
-  STAR,
-  GUIDED_BLUE,
-  GUIDED,
-  LANDSCAPE_PRIMARY,
-  SIGHTSEEING,
-  SIGHTSEEING_BLUE,
-  GUIDED_DISABLED,
-  SIGHTSEEING_DISABLED,
-  BELL,
-  USER,
-  CHEV_RIGHT,
-  SHARE,
-  LANDSCAPE_SECONDARY,
-  STAR_FILL,
-  COMMENT,
-  CROWD,
-  LANDSCAPE_BLUE_40,
-  GUIDED_BLUE_40,
-  SIGHTSEEING_BLUE_40,
-  LANDSCAPE_DISABLED,
-  MENU,
+    CLOCK,
+    BI_HEART,
+    HEART,
+    CARET_UP,
+    CARET_DOWN,
+    CHEV_DOWN,
+    FACEBOOK,
+    YOUTUBE,
+    INSTAGRAM,
+    PINTEREST,
+    SEARCH,
+    CALENDAR,
+    PIN,
+    STAR,
+    GUIDED_BLUE,
+    GUIDED,
+    LANDSCAPE_PRIMARY,
+    SIGHTSEEING,
+    SIGHTSEEING_BLUE,
+    GUIDED_DISABLED,
+    SIGHTSEEING_DISABLED,
+    BELL,
+    USER,
+    CHEV_RIGHT,
+    SHARE,
+    LANDSCAPE_SECONDARY,
+    STAR_FILL,
+    COMMENT,
+    CROWD,
+    LANDSCAPE_BLUE_40,
+    GUIDED_BLUE_40,
+    SIGHTSEEING_BLUE_40,
+    LANDSCAPE_DISABLED,
+    MENU,
+    CHEV_LEFT,
+    CHEV_UP,
 };

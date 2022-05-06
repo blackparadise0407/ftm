@@ -1,43 +1,43 @@
-@import "imports";
-@import "base";
-@import "variables";
-@import "typography";
-@import "mixins";
-@import "reset";
+@import 'imports';
+@import 'base';
+@import 'variables';
+@import 'typography';
+@import 'mixins';
+@import 'reset';
 
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
 
 html {
-  font-family: $font;
+    font-family: $font;
 }
 
 body {
-  font-size: $fs-base;
-  overflow-x: hidden;
-  font-weight: $font-normal;
+    font-size: $fs-base;
+    overflow-x: hidden;
+    font-weight: $font-normal;
 }
 
 h1 {
-  @extend .h1;
+    @extend .h1;
 }
 
 h2 {
-  @extend .h2;
+    @extend .h2;
 }
 
 h3 {
-  @extend .h3;
+    @extend .h3;
 }
 
 h4 {
-  @extend .h4;
+    @extend .h4;
 }
 
 h5 {
-  @extend .h5;
+    @extend .h5;
 }
 
 h6 {
-  @extend .h6;
+    @extend .h6;
 }

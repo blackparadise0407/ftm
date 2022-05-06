@@ -3,7 +3,10 @@
     width: 369.58px;
     height: 369.58px;
 
-
-    background: linear-gradient(180deg, #2FCFF2 0%, rgba(186, 234, 255, 0) 100%);
+    background: linear-gradient(
+        180deg,
+        #2fcff2 0%,
+        rgba(186, 234, 255, 0) 100%
+    );
     filter: blur(100px);
 }

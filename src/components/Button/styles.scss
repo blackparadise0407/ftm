@@ -1,82 +1,84 @@
-@import "assets/styles/variables";
+@import 'assets/styles/variables';
 
 .button {
-  outline: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  border: 2px solid transparent;
-  border-radius: 100px;
-  font-size: $fs-base;
-  font-weight: $font-bold;
-  font-family: $font;
-  transition: background-color ease 0.2s, color ease 0.2s, border-color ease 0.2s;
-  cursor: pointer;
-
-  &--block {
-    display: block;
-    width: 100%;
-  }
-
-  &--primary {
-    --border-color: #{$cerulean-blue};
-    --background-color: #{$cerulean-blue};
-    --color: #{$cerulean-blue};
-  }
-
-  &--info {
-    --border-color: #{$jordy-blue};
-    --background-color: #{$jordy-blue};
-    --color: #{$jordy-blue};
-  }
-
-  &--secondary {
-    --border-color: #{$vivid-tangelo};
-    --background-color: #{$vivid-tangelo};
-    --color: #{$vivid-tangelo};
-  }
-
-  &--default {
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid transparent;
+    border-radius: 100px;
     font-size: $fs-base;
-    padding: 17px 36px;
-    text-transform: uppercase;
+    font-weight: $font-bold;
+    font-family: $font;
+    white-space: nowrap;
+    transition: background-color ease 0.2s, color ease 0.2s,
+        border-color ease 0.2s;
+    cursor: pointer;
 
-    @media screen and (max-width: 480px) {
-      font-size: $fs-sm;
-      padding: 12px 30px;
+    &--block {
+        display: block;
+        width: 100%;
     }
-  }
 
-  &--small {
-    font-size: $fs-sm;
-    padding: 10px 19px;
-    text-transform: capitalize;
-
-    @media screen and (max-width: 480px) {
-      padding: 4.71px 7.57px;
+    &--primary {
+        --border-color: #{$cerulean-blue};
+        --background-color: #{$cerulean-blue};
+        --color: #{$cerulean-blue};
     }
-  }
 
-  &--outlined {
-    background-color: $white;
-    border-color: var(--border-color);
-    color: var(--color);
-
-    &:hover {
-      background-color: var(--background-color);
-      color: $white;
+    &--info {
+        --border-color: #{$jordy-blue};
+        --background-color: #{$jordy-blue};
+        --color: #{$jordy-blue};
     }
-  }
 
-  &--filled {
-    color: $white;
-    background-color: var(--background-color);
-
-    &:hover {
-      background-color: $white;
-      border-color: var(--border-color);
-      color: var(--color);
+    &--secondary {
+        --border-color: #{$vivid-tangelo};
+        --background-color: #{$vivid-tangelo};
+        --color: #{$vivid-tangelo};
     }
-  }
+
+    &--default {
+        font-size: $fs-base;
+        padding: 17px 36px;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 480px) {
+            font-size: $fs-sm;
+            padding: 12px 30px;
+        }
+    }
+
+    &--small {
+        font-size: $fs-sm;
+        padding: 10px 19px;
+        text-transform: capitalize;
+
+        @media screen and (max-width: 480px) {
+            padding: 4.71px 7.57px;
+        }
+    }
+
+    &--outlined {
+        background-color: $white;
+        border-color: var(--border-color);
+        color: var(--color);
+
+        &:hover {
+            background-color: var(--background-color);
+            color: $white;
+        }
+    }
+
+    &--filled {
+        color: $white;
+        background-color: var(--background-color);
+
+        &:hover {
+            background-color: $white;
+            border-color: var(--border-color);
+            color: var(--color);
+        }
+    }
 }

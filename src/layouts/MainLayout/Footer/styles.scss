@@ -1,83 +1,101 @@
-@import "assets/styles/variables";
+@import 'assets/styles/variables';
 
 footer.footer {
-  height: 650px;
-  padding-top: 73px;
-  background-color: rgba($color: $vivid-tangelo, $alpha: 0.65);
+    height: 650px;
+    padding-top: 73px;
+    background-color: rgba($color: $vivid-tangelo, $alpha: 0.65);
 
-  @media screen and (max-width: 1440px) {
-    padding: 28px 30px 0;
-  }
-
-  @media screen and (max-width: 1024px) {
-    padding: 28px $spacing-h-sm 0;
-    height: auto;
-  }
-
-
-  .foot-t {
-    font-size: 40px;
-    line-height: 1;
-  }
-
-  .foot-c {
+    @media screen and (max-width: 1440px) {
+        padding: 28px 30px 0;
+    }
 
     @media screen and (max-width: 1024px) {
-      flex-direction: column;
-      gap: 20px;
-      margin-bottom: 27px;
+        padding: 28px $spacing-h-sm 0;
+        height: auto;
     }
 
-  }
+    .foot-t {
+        font-size: 40px;
+        line-height: 1;
+    }
 
-  .left {
-    .links {
-      margin-top: 40px;
-      gap: 100px;
+    .foot-c {
+        gap: 40px;
 
-      @media screen and (max-width: 480px) {
-        flex-wrap: wrap;
-        margin-top: 20px;
-        row-gap: 15px;
-      }
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 27px;
+        }
+    }
 
-      .section {
+    .left {
+        .links {
+            margin-top: 40px;
+            gap: 100px;
 
-        li {
+            @media screen and (max-width: 768px) {
+                flex-wrap: wrap;
+                margin-top: 20px;
+                row-gap: 15px;
+            }
 
-          &:hover {
-            text-decoration: underline;
-          }
+            .section {
+                li {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                ul {
+                    margin-top: 19px;
+                    gap: 26px;
+                }
+            }
+        }
+    }
+
+    .right {
+        @media screen and (max-width: 1024px) {
+            margin-top: 80px;
+            margin-bottom: 20px;
         }
 
-        ul {
-          margin-top: 19px;
-          gap: 26px;
+        img {
+            max-width: 570px;
+            width: 100%;
+            aspect-ratio: 1.48;
+
+            @media screen and (max-width: 1024px) {
+                max-width: 301px;
+            }
+
+            @media screen and (max-width: 768px) {
+                max-width: 386px;
+            }
         }
-      }
-    }
-  }
 
-  .right {
-    img {
-      max-width: 570px;
-      width: 100%;
-      aspect-ratio: 1.48;
+        button {
+            max-width: 570px;
+            width: 100%;
+            margin-top: 30px;
+
+            @media screen and (max-width: 1024px) {
+                max-width: 301px;
+            }
+
+            @media screen and (max-width: 768px) {
+                max-width: 386px;
+            }
+        }
     }
 
-    button {
-      max-width: 570px;
-      width: 100%;
-      margin-top: 30px;
-    }
-  }
+    .copyright {
+        padding: 15px 0;
+        border-top: 0.5px solid $white;
 
-  .copyright {
-    padding: 15px 0;
-    border-top: 0.5px solid $white;
-
-    .icon-groups {
-      gap: 11px;
+        .icon-groups {
+            gap: 11px;
+        }
     }
-  }
 }

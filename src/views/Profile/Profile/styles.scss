@@ -1,10 +1,14 @@
 @import 'assets/styles/variables';
 
 .profile-page {
-
     &__main {
         margin-top: 59px;
         gap: 30px;
+
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__navigation {
@@ -15,19 +19,56 @@
         border-radius: 20px;
         overflow: hidden;
 
+        @media screen and (max-width: 1200px) {
+            max-width: 301px;
+        }
+
+        @media screen and (max-width: 1024px) {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            border-color: transparent;
+            border-radius: 0;
+            overflow-x: auto;
+            max-width: 633px;
+        }
+
         .item {
             padding: 19px 40px;
 
+            @media screen and (max-width: 1024px) {
+                padding: 0 0 10px;
+                white-space: nowrap;
+            }
+
             &:not(:last-child) {
                 border-bottom: 1px solid $jordy-blue;
+
+                @media screen and (max-width: 1024px) {
+                    border-bottom: none;
+                }
             }
 
             &--active {
                 background-color: $cerulean-blue;
                 color: $white;
+
+                @media screen and (max-width: 1024px) {
+                    color: $cerulean-blue;
+                    background-color: transparent;
+                    border-bottom: 2px solid $cerulean-blue !important;
+                }
             }
         }
+    }
 
+    &__container {
+        max-width: 930px;
+        width: 100%;
+
+        @media screen and (max-width: 1200px) {
+            max-width: 633px;
+        }
 
     }
 }
