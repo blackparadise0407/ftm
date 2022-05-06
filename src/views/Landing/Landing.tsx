@@ -58,7 +58,7 @@ export default function Landing() {
             arrows: false,
             autoplay: true,
             pauseOnHover: true,
-            rtl: true,
+            rtl: false,
             speed: 2000,
             autoplaySpeed: 2000,
             cssEase: 'linear',
