@@ -18,22 +18,25 @@ export default memo(function Filter() {
     const [range, setRange] = useState<number[]>([MIN, MAX]);
     const [collapsed, setCollapsed] = useState(false);
 
-    const [w] = useWindowSize()
+    const [w] = useWindowSize();
 
     useEffect(() => {
-    if(w> 768) {
-       if(collapsed) setCollapsed(false)
-    }
-      return () => {
-      }
-    }, [w])
-    
+        if (w > 768) {
+            if (collapsed) setCollapsed(false);
+        }
+        return () => {};
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [w]);
 
     return (
-        <div className={clsx("filter", collapsed && "filter--collapsed")}>
+        <div className={clsx('filter', collapsed && 'filter--collapsed')}>
             <div className="filter__title flex items-center justify-between">
                 <h4 className="h4 uppercase text-gray-5">Filters</h4>
-                <img onClick={()=>setCollapsed(p=>!p)} src={!collapsed ? CHEV_DOWN_S : CHEV_UP_S} alt="" />
+                <img
+                    onClick={() => setCollapsed((p) => !p)}
+                    src={!collapsed ? CHEV_DOWN_S : CHEV_UP_S}
+                    alt=""
+                />
             </div>
             <div className="filter__section">
                 <span className="h5">49 </span>
