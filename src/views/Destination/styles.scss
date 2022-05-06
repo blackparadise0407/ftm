@@ -1,0 +1,88 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
+.destination-page {
+    padding: 30px 0;
+
+    &__heading {
+        display: none;
+
+        @media screen and (max-width: 1024px) {
+            max-width: 964px;
+            width: 100%;
+            height: 100px;
+            background-color: rgba($color: $jordy-blue, $alpha: 0.3);
+            border-radius: 20px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 30px;
+        }
+
+        @media screen and (max-width: 480px) {
+            display: none;
+        }
+    }
+
+    #chartdiv {
+        height: 812px;
+        margin: 0 auto;
+        background: rgba(60, 99, 180, 0.5);
+        border: 10px solid rgba(205, 205, 205, 0.5);
+        box-sizing: border-box;
+        box-shadow: inset -20px -20px 24px rgba(0, 0, 0, 0.1);
+        border-radius: 50px;
+        margin-bottom: 38px;
+        overflow: hidden;
+
+        @media screen and (min-width: 1440px) {
+            max-width: 1670px;
+        }
+
+        @media screen and (max-width: 1200px) {
+            max-width: 1200px;
+        }
+
+        @media screen and (max-width: 768px) {
+            max-width: 768px;
+        }
+
+        @media screen and (max-width: 480px) {
+            max-width: 480px;
+            height: 308px;
+        }
+    }
+
+    &__list {
+        display: none;
+        background-color: rgba($color: $jordy-blue, $alpha: 0.3);
+        border-radius: 44px;
+        padding: 25px 40px;
+
+        @media screen and (max-width: 1024px) {
+            display: block;
+        }
+
+        .h3 {
+            text-align: center;
+
+            @media screen and (max-width: 480px) {
+                text-align: left;
+            }
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+
+            @media screen and (max-width: 480px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            ul {
+                list-style: disc;
+            }
+        }
+    }
+}

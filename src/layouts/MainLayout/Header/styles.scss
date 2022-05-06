@@ -21,12 +21,10 @@ nav.header {
         -moz-box-shadow: none;
     }
 
-    @media screen and (max-width: 1440px) {
-        padding: 0 30px;
-    }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1200px) {
         padding: 0 $spacing-h-sm;
+        height: 80px;
 
         .h4 {
             font-size: 16px;
@@ -49,6 +47,16 @@ nav.header {
                 display: none;
             }
         }
+    }
+
+    .bread-crumb {
+        display: none;
+        gap: 5px;
+
+        @media screen and (max-width: 768px) {
+            display: flex;
+        }
+
     }
 
     .logo {
@@ -132,7 +140,7 @@ nav.header {
                     cursor: pointer;
                 }
 
-                &--profile {
+                &__profile {
                     gap: 10px;
 
                     img.avatar {
@@ -165,7 +173,23 @@ nav.header {
         }
     }
 
+    .item__profile {
+        gap: 10px;
+
+        img.avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+    }
+
     .login-btn {
+        button {
+            @media screen and (max-width: 1200px) {
+                padding: 15px 36px;
+            }
+        }
+
         @media screen and (max-width: 768px) {
             display: none;
         }
@@ -204,6 +228,18 @@ nav.header {
 
                 &:not(:last-child) {
                     border-bottom: 1px solid $jordy-blue;
+                }
+
+                .link {
+                    transition: color ease 0.2s;
+
+                    &--active {
+                        color: $cerulean-blue;
+                    }
+
+                    &:hover {
+                        color: $cerulean-blue;
+                    }
                 }
             }
         }

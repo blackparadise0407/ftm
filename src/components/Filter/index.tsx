@@ -1,27 +1,39 @@
-import { memo, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import { getTrackBackground, Range } from 'react-range';
 
-import { CHEV_DOWN, SEARCH } from 'assets/svgs';
+import { CHEV_DOWN_S, CHEV_UP_S, SEARCH } from 'assets/svgs';
 import Checkbox from 'components/Checkbox';
 import DatePicker from 'components/DatePicker';
 import Input from 'components/Input';
 import { getFormatTimeFromMinute } from 'utils/string';
 
 import './styles.scss';
+import clsx from 'clsx';
+import { useWindowSize } from 'hooks';
 
 const MIN = 0;
 const MAX = 1380;
 
 export default memo(function Filter() {
     const [range, setRange] = useState<number[]>([MIN, MAX]);
-    const [open, setOpen] = useState(false);
+    const [collapsed, setCollapsed] = useState(false);
+
+    const [w] = useWindowSize()
+
+    useEffect(() => {
+    if(w> 768) {
+       if(collapsed) setCollapsed(false)
+    }
+      return () => {
+      }
+    }, [w])
+    
 
     return (
-        <div className="filter">
-            <div className="filter__title">
+        <div className={clsx("filter", collapsed && "filter--collapsed")}>
+            <div className="filter__title flex items-center justify-between">
                 <h4 className="h4 uppercase text-gray-5">Filters</h4>
-                <img src={CHEV_DOWN} alt="" />
-                {/* <img src={CHEV_UP} alt="" /> */}
+                <img onClick={()=>setCollapsed(p=>!p)} src={!collapsed ? CHEV_DOWN_S : CHEV_UP_S} alt="" />
             </div>
             <div className="filter__section">
                 <span className="h5">49 </span>

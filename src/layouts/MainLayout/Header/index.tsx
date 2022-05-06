@@ -2,13 +2,12 @@ import { useCallback, useMemo, useRef, useState } from 'react';
 import clsx from 'clsx';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 
-import { CHEV_DOWN, CHEV_LEFT, Menu, MENU } from 'assets/svgs';
+import { CHEV_DOWN, CHEV_LEFT, Menu } from 'assets/svgs';
 import { Button } from 'components';
 import { useAuthContext } from 'contexts';
 import { useEventListener, useOnClickOutside } from 'hooks';
 
 import './styles.scss';
-import { useNavigation } from 'react-day-picker';
 
 const links = [
     { to: '/tours', title: 'Tours' },
@@ -23,6 +22,10 @@ const links = [
     {
         to: '/destinations',
         title: 'Destinations',
+    },
+    {
+        to: '/profile',
+        title: 'Profile',
     },
 ];
 
@@ -55,7 +58,7 @@ const _renderUser = (onSignOut: () => void) => {
                     <span className="h5">Top-Up</span>
                 </div>
                 <Link to="/profile/patrick">
-                    <div className="item flex items-center item--profile text-dark">
+                    <div className="item flex items-center item__profile text-dark">
                         <img
                             className="avatar"
                             src="https://i.pravatar.cc/200"
@@ -128,7 +131,7 @@ export default function Header() {
                 {!isHome && (
                     <Link
                         to="/"
-                        className="flex items-center text-dark font-bold text-base"
+                        className="flex items-center text-dark font-bold text-base bread-crumb"
                     >
                         <img src={CHEV_LEFT} alt="" />
                         <span>{links[currentPathIdx].title}</span>
@@ -136,19 +139,25 @@ export default function Header() {
                 )}
                 <div className="flex-grow"></div>
                 <ul className="flex uppercase">
-                    {links.map(({ to, title }, idx) => (
-                        <li key={idx} className="h4">
-                            <NavLink
-                                className={({ isActive }) =>
-                                    clsx('link', isActive ? 'link--active' : '')
-                                }
-                                to={to}
-                            >
-                                {title}
-                            </NavLink>
-                        </li>
-                    ))}
+                    {links
+                        .filter((x) => x.to !== '/profile')
+                        .map(({ to, title }, idx) => (
+                            <li key={idx} className="h4">
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        clsx(
+                                            'link',
+                                            isActive ? 'link--active' : ''
+                                        )
+                                    }
+                                    to={to}
+                                >
+                                    {title}
+                                </NavLink>
+                            </li>
+                        ))}
                 </ul>
+                <div className="flex-grow"></div>
                 {isAuth ? _renderUser(onSignOut) : _renderGuest(onLogin)}
                 <div className="relative menu-wrapper flex items-center justify-center">
                     <Menu
@@ -161,26 +170,53 @@ export default function Header() {
                             ref={menuRef}
                             className="menu-popup absolute uppercase"
                         >
-                            {links.map(({ to, title }, idx) => (
-                                <li key={idx} className="h6">
-                                    <NavLink
-                                        className={({ isActive }) =>
-                                            clsx(
-                                                'link',
-                                                isActive ? 'link--active' : ''
-                                            )
-                                        }
-                                        onClick={() => setMenuOpen(false)}
-                                        to={to}
+                            {links
+                                .filter((x) => x.to !== '/profile')
+                                .map(({ to, title }, idx) => (
+                                    <li key={idx} className="h6">
+                                        <NavLink
+                                            className={({ isActive }) =>
+                                                clsx(
+                                                    'link',
+                                                    isActive
+                                                        ? 'link--active'
+                                                        : ''
+                                                )
+                                            }
+                                            onClick={() => setMenuOpen(false)}
+                                            to={to}
+                                        >
+                                            {title}
+                                        </NavLink>
+                                    </li>
+                                ))}
+                            {isAuth && (
+                                <li
+                                    className="h6"
+                                    onClick={isAuth ? onSignOut : onLogin}
+                                >
+                                    <Link
+                                        className="link"
+                                        to="/profile/patrick"
                                     >
-                                        {title}
-                                    </NavLink>
+                                        <div className="item flex items-center item__profile text-dark">
+                                            <img
+                                                className="avatar"
+                                                src="https://i.pravatar.cc/200"
+                                                alt=""
+                                            />
+                                            <span className="h5">Profile</span>
+                                        </div>
+                                    </Link>
                                 </li>
-                            ))}
-                            <li className="h6" onClick={onLogin}>
-                                <NavLink className="link" to="">
-                                    Log in
-                                </NavLink>
+                            )}
+                            <li
+                                className="h6"
+                                onClick={isAuth ? onSignOut : onLogin}
+                            >
+                                <Link className="link" to="">
+                                    {isAuth ? 'Log out' : 'Log in'}
+                                </Link>
                             </li>
                         </div>
                     )}

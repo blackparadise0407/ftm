@@ -33,7 +33,8 @@ import COMMENT from './comment.svg';
 import CROWD from './crowd.svg';
 import MENU from './menu.svg';
 import CHEV_LEFT from './chev-left.svg';
-import CHEV_UP from './chev-up.svg';
+import CHEV_UP_S from './chev-up-s.svg';
+import CHEV_DOWN_S from './chev-down-s.svg';
 
 export { default as Clock } from './Clock';
 export { default as StarOutlined } from './StarOutlined';
@@ -80,5 +81,6 @@ export {
     LANDSCAPE_DISABLED,
     MENU,
     CHEV_LEFT,
-    CHEV_UP,
+    CHEV_UP_S,
+    CHEV_DOWN_S
 };

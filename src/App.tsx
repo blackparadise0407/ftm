@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { MainLayout } from 'layouts/MainLayout';
 import {
+    DestinationPage,
     GuideDetailPage,
     GuideListPage,
     LandingPage,
@@ -51,6 +52,7 @@ function App() {
                         element={<div>settings</div>}
                     />
                 </Route>
+                <Route path="/destinations" element={<DestinationPage />} />
                 <Route path="*" element={<NotFoundPage />} />
             </Route>
         </Routes>
